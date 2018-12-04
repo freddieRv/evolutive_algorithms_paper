@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.3)  4 DEC 2018 16:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.3)  4 DEC 2018 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**article_2.tex
-(./article_2.tex
+**evolutive_algorithms.tex
+(./evolutive_algorithms.tex
 LaTeX2e <2018-04-01> patch level 5
 (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -90,8 +90,13 @@ Package: babel 2018/11/13 3.27 The Babel package
 (/usr/share/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2018/11/13 3.27 Babel switching mechanism
 )
-(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2017/06/06 v3.3r English support from the babel system
+(/usr/share/texmf-dist/tex/generic/babel-german/german.ldf
+Language: german 2018/03/29 v2.10 German support for babel (pre-1996 orthograph
+y)
+
+(/usr/share/texmf-dist/tex/generic/babel-german/germanb.ldf
+Language: germanb 2018/03/29 v2.10 German support for babel (pre-1996 orthograp
+hy)
 
 (/usr/share/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2018/11/13 3.27 Babel common definitions
@@ -101,10 +106,8 @@ File: babel.def 2018/11/13 3.27 Babel common definitions
 (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count109
 )
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
-))
+Package babel Info: Making " an active character on input line 135.
+)))
 (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
@@ -365,8 +368,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip64
 )
-No file article_2.aux.
-\openout1 = `article_2.aux'.
+(./evolutive_algorithms.aux)
+\openout1 = `evolutive_algorithms.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
@@ -383,7 +386,7 @@ LaTeX Font Info:    ... okay on input line 90.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
 LaTeX Font Info:    Try loading font information for T1+pplx on input line 90.
-(/usr/share/texmf-dist/tex/latex/psnfss/t1pplx.fd
+ (/usr/share/texmf-dist/tex/latex/psnfss/t1pplx.fd
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
 )
 \big@size=\dimen162
@@ -397,7 +400,6 @@ Package microtype Info: Using default expansion set `basictext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-
 (/usr/share/texmf-dist/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
@@ -452,8 +454,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 90.
 LaTeX Info: Redefining \pageref on input line 90.
 LaTeX Info: Redefining \nameref on input line 90.
+
+(./evolutive_algorithms.out) (./evolutive_algorithms.out)
 \@outlinefile=\write3
-\openout3 = `article_2.out'.
+\openout3 = `evolutive_algorithms.out'.
 
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 94.
@@ -494,15 +498,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Try loading font information for OMS+pplx on input line 94.
-
-LaTeX Font Info:    No file OMSpplx.fd. on input line 94.
-
-
-LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textasteriskcentered' on input line 94.
-
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <10> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 94.
 Package microtype Info: Character `029' is missing
@@ -512,6 +507,15 @@ Package lettrine.sty Info: Targeted height = 30.07506pt
 (lettrine.sty)             (no accent, loversize=0),
 (lettrine.sty)             Lettrine height = 30.07518pt (L);
 (lettrine.sty)             reported on input line 101.
+LaTeX Font Info:    Try loading font information for OMS+pplx on input line 112
+.
+LaTeX Font Info:    No file OMSpplx.fd. on input line 112.
+
+
+LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 112.
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -519,15 +523,22 @@ Package lettrine.sty Info: Targeted height = 30.07506pt
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <9> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 129.
 
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
+\T1/pplx/m/n/10 (+20) A state-ment re-qui-ring ci-ta-ti-on
+ []
 
-LaTeX Warning: Citation `Figueredo:2009dg' on page 2 undefined on input line 15
-8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
+\T1/pplx/m/n/10 (+20) [[]]. Lo-rem ip-sum
+ []
 
 
-Underfull \vbox (badness 1320) has occurred while \output is active []
+Underfull \hbox (badness 1348) in paragraph at lines 158--160
+\T1/pplx/m/n/10 (+20) in, ve-lit. Ut port-ti-tor. Prae-sent in sa-pi-en.
+ []
 
- [2]
-Underfull \hbox (badness 1748) in paragraph at lines 172--176
+[2]
+Underfull \hbox (badness 2486) in paragraph at lines 172--176
 []\T1/pplx/m/n/10 (+20) Figueredo, A. J.
  []
 
@@ -536,48 +547,35 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
- (./article_2.aux)
+ (./evolutive_algorithms.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
+Package rerunfilecheck Info: File `evolutive_algorithms.out' has not changed.
+(rerunfilecheck)             Checksum: B80D3E5E100053B48E7649ED8176694E;302.
 
-
-Package rerunfilecheck Warning: File `article_2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `article_2.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  B80D3E5E100053B48E7649ED8176694E;302.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
  ) 
 Here is how much of TeX's memory you used:
- 9773 strings out of 492639
- 149819 string characters out of 6135497
- 291924 words of memory out of 5000000
- 13347 multiletter control sequences out of 15000+600000
- 70281 words of font info for 213 fonts, out of 8000000 for 9000
+ 9872 strings out of 492639
+ 151201 string characters out of 6135497
+ 293551 words of memory out of 5000000
+ 13427 multiletter control sequences out of 15000+600000
+ 70440 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,12n,43p,254b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,10n,43p,265b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/
-share/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/font
-s/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino
-/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on article_2.pdf (3 pages, 92732 bytes).
+/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrc8a.p
+fb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf
+-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/ur
+w/palatino/uplri8a.pfb>
+Output written on evolutive_algorithms.pdf (3 pages, 80655 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  14 named destinations out of 1000 (max. 500000)
- 61441 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 61489 words of extra memory for PDF output out of 61914 (max. 10000000)
 
