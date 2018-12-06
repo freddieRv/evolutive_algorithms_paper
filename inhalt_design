@@ -9,7 +9,7 @@
 - Algunos historicos
     + Desde hace cuanto los AE son "un tema"
 - Su popularidad
-    + Un estimado de papers publicados al año sobre AE
+    + Un estimado de papers publicados al año sobre AE (maybe, if I find something on this)
 
 ## Hauptteil
 - Optimization
@@ -24,22 +24,25 @@
     + Inspirados en la naturaleza (la mayoría)
     + Parte de IA
         * Requerimientos para llamar a un sistema "inteligente"
-        * Porque (maybe)
-    + Porque se les llama evolutivos
+        * Porque los AE se consideran parte de la IA (maybe, si puedo argumentarlo)
+    + Porque se les llama evolutivos (maybe, esto se puede mencionar de "paso" en la parte de "Elementos principales de una AE")
         * Because eras/generaciones, bitch!
-- Algunos AE actuales (Breve explicación de como funcionan y para que tipo de problemas son mas utilizados, tal vez poner pseudo-codigo para uno o dos algoritmos)
+- Algunos AE actuales (Breve explicación de genau como funcionan. Tal vez poner pseudo-codigo para uno o dos algoritmos)
     + AG
     + ABC
     + PSO
     + ACO
     + DE
     + GSA
+    + Algún algoritmo basado en un fenómeno social o algo que tenga que ver con música
+    + Mencionar (solo por nombre y abreviación y, si se puede, referencia a donde se mencionaron por primera vez) tres chingos de algoritmos
     + Mencionar algunos benchmarks
 - Usos y aplicaciones
-    + Optimizacion (is there anything else?)
+    + Real life areas (like medicine, building motors or planes, etc)
 
 ## Diskussion - Vor- und Nachteile
-- What are they good for and what are they not good fo
+- What are they good for and what are they not good for
+    + Hay un quote interesante sobre esto casi al final de una de las diapositivas de la Dr. Alma
 - Like any other IA technique, EA work better combined in a hybrid system
 
 ## Zusammenfasung
