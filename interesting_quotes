@@ -1,0 +1,26 @@
+Los sistemas expertos modelan el razonamiento deductivo, mientras que los AE modelan el razonamiento inductivo.
+    ~ Capítulo 1, diapositiva 5 ~
+
+Los algoritmos de computación suave generalmente calculan buenas pero inexactas soluciones a problemas que son difíciles, ruidosos, multimodales y multi-objetivo.
+    ~ Capítulo 1, diapositiva 6 ~
+
+AE: algoritmo que evoluciona la solución de un problema a través de muchas iteraciones.
+    ~ Capítulo 1, diapositiva 11 ~
+
+Un sistema de IA debe ser capaz de realizar tres cosas:
+    - Almacenar conocimiento
+    - Aplicar el conocimiento almacenado para resolver problemas
+    - Adquirir nuevo conocimiento a través de la experiencia
+        ~ Capítulo 1, diapositiva 31 ~
+
+(Cost | Fitness) | Objective function
+    ~ Capítulo 2, diapositiva 34 ~
+
+Características de la inteligencia:
+    - Adaptación
+    - Aleatoriedad
+    - Comunicación
+    - Retroalimentación
+    - Exploración
+    - Explotación
+        ~ Capítulo 2, diapositiva 66 ~

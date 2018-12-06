@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.3)  4 DEC 2018 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.3)  6 DEC 2018 11:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -507,9 +507,6 @@ Package lettrine.sty Info: Targeted height = 30.07506pt
 (lettrine.sty)             (no accent, loversize=0),
 (lettrine.sty)             Lettrine height = 30.07518pt (L);
 (lettrine.sty)             reported on input line 98.
-
-Underfull \vbox (badness 2662) has occurred while \output is active []
-
 LaTeX Font Info:    Try loading font information for OMS+pplx on input line 109
 .
 LaTeX Font Info:    No file OMSpplx.fd. on input line 109.
@@ -564,18 +561,18 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 178.
 Here is how much of TeX's memory you used:
  9872 strings out of 492639
  151201 string characters out of 6135497
- 293736 words of memory out of 5000000
+ 294800 words of memory out of 5000000
  13427 multiletter control sequences out of 15000+600000
  70440 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,10n,43p,265b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,10n,43p,265b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrc8a.p
 fb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf
 -dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/ur
 w/palatino/uplri8a.pfb>
-Output written on evolutive_algorithms.pdf (3 pages, 79932 bytes).
+Output written on evolutive_algorithms.pdf (3 pages, 80389 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream

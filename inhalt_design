@@ -1,13 +1,45 @@
-Que es un algoritmo evolutivo
-	Inspirados en la naturaleza (la mayoría)
-	Parte de IA
-		Porque (maybe)
+(Abstrakt)
+- Popularity and success of EA
 
-Algunos AE actuales
-	ABC
-	DE
-	GSA
-	
+(Einleitung - Motivation)
+- What is optimization, why is it important and hard
+- EA as a good way to approach optimization problems
 
-Usos y aplicaciones
-	Optimizacion (is there anything else?)
+(Stand der Forschung)
+- Algunos historicos
+    + Desde hace cuanto los AE son "un tema"
+    + Su popularidad
+        ~ Un estimado de papers publicados al año sobre AE
+
+(Hauptteil)
+- Optimization
+    + What is it
+    + (Un-)constrained, (multi- | uni-)modal
+    + Mention common problems, and explain why iteration doesn't work (TSP and the number of possibilities with few nodes)
+- Que es un AE
+    + Elementos principales de un AE
+        * Poblacion de soluciones candidatas
+        * Funcion objetivo
+        * Generaciones
+    + Inspirados en la naturaleza (la mayoría)
+    + Parte de IA
+        * Requerimientos para llamar a un sistema "inteligente"
+        * Porque (maybe)
+    + Porque se les llama evolutivos
+        * Because eras/generaciones, bitch!
+- Algunos AE actuales (Breve explicación de como funcionan y para que tipo de problemas son mas utilizados, tal vez poner pseudo-codigo para uno o dos algoritmos)
+    + AG
+    + ABC
+    + PSO
+    + ACO
+    + DE
+    + GSA
+    + Mencionar algunos benchmarks
+- Usos y aplicaciones
+    + Optimizacion (is there anything else?)
+
+(Diskussion - Vor- und Nachteile)
+- What are they good for and what are they not good fo
+- Like any other IA technique, EA work better combined in a hybrid system
+
+(Zusammenfasung)
