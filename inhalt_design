@@ -1,17 +1,17 @@
-(Abstrakt)
+## Abstrakt
 - Popularity and success of EA
 
-(Einleitung - Motivation)
+## Einleitung - Motivation
 - What is optimization, why is it important and hard
 - EA as a good way to approach optimization problems
 
-(Stand der Forschung)
+## Stand der Forschung
 - Algunos historicos
     + Desde hace cuanto los AE son "un tema"
     + Su popularidad
         ~ Un estimado de papers publicados al año sobre AE
 
-(Hauptteil)
+## Hauptteil
 - Optimization
     + What is it
     + (Un-)constrained, (multi- | uni-)modal
@@ -38,8 +38,8 @@
 - Usos y aplicaciones
     + Optimizacion (is there anything else?)
 
-(Diskussion - Vor- und Nachteile)
+## Diskussion - Vor- und Nachteile
 - What are they good for and what are they not good fo
 - Like any other IA technique, EA work better combined in a hybrid system
 
-(Zusammenfasung)
+## Zusammenfasung
