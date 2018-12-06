@@ -24,3 +24,10 @@ Características de la inteligencia:
     - Exploración
     - Explotación
         ~ Capítulo 2, diapositiva 66 ~
+
+En términos generales, para simular el proceso evolutivo en una computadora se requiere:
+    - Codificar las estructuras que se replicarán.
+    - Operaciones que afecten a los “individuos”.
+    - Una función de aptitud.
+    - Un mecanismo de selección.
+        ~ Capítulo 3, diapositiva 38 ~
