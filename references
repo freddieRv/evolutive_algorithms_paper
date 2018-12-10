@@ -1,3 +1,24 @@
 https://en.wikipedia.org/wiki/File:Metaheuristics_classification.svg
 
+////////////////////// ABC original paper //////////////////////
 Karaboga, D, (2005). An idea based on honey bee swarm for numerical optimization. Technical Report TR06, Erciyes University, Engineering Faculty, Computer Engineering Department, 2005.
+////////////////////////////////////////////////////////////////
+
+////////////////////// Regarding DE //////////////////////
+- Storn, R.; Price, K. (1997). "Differential evolution - a simple and efficient heuristic for global optimization over continuous spaces". Journal of Global Optimization. 11: 341&ndash, 359. doi:10.1023/A:1008202821328.
+- Storn, R. (1996). "On the usage of differential evolution for function optimization". Biennial Conference of the North American Fuzzy Information Processing Society (NAFIPS). pp. 519&ndash, 523.
+- Price, K.; Storn, R.M.; Lampinen, J.A. (2005). Differential Evolution: A Practical Approach to Global Optimization. Springer. ISBN 978-3-540-20950-8.
+- Feoktistov, V. (2006). Differential Evolution: In Search of Solutions. Springer. ISBN 978-0-387-36895-5.
+- G. C. Onwubolu and B V Babu, "New Optimization Techniques in Engineering". Retrieved 17 September 2016.
+- Chakraborty, U.K., ed. (2008), Advances in Differential Evolution, Springer, ISBN 978-3-540-68827-3
+//////////////////////////////////////////////////////////
+
+////////////////////// GSA original paper //////////////////////
+Rashedi, E., Nezamabadi-pour, H., and Saryazdi, S. (2009). GSA: A gravitational search algorithm. Information Sciences, 179(13):2232-2248.
+////////////////////////////////////////////////////////////////
+
+
+///////////// Papers on GA real-world applications /////////////
+https://apps.dtic.mil/dtic/tr/fulltext/u2/a485044.pdf
+http://www.icas.org/ICAS_ARCHIVE/ICAS2002/PAPERS/114.PDF
+////////////////////////////////////////////////////////////////
