@@ -31,3 +31,16 @@ En términos generales, para simular el proceso evolutivo en una computadora se 
     - Una función de aptitud.
     - Un mecanismo de selección.
         ~ Capítulo 3, diapositiva 38 ~
+
+
+Entonces los AE deben de ser considerados en cualquier momento en que se desea resolver un problema de optimización difícil. Esto no significa que los AE son siempre la mejor selección para el trabajo.
+Si se desea diseñar un edificio o proyectar un sistema de transporte, los AE son la respuesta. Si se desea diseñar un circuito eléctrico complejo o un programa computacional, los AE pueden hacer el trabajo.
+Pero si el problema tiene una buena solución con métodos clásicos es mejor utilizarlos ya sean analíticos o numéricos.
+    ~ Capítulo 2, diapositiva 32 ~
+
+
+Comparative studies of multiobjective EAs available to date:
+    - Wilson & Macleod, 1993
+    - Cieniawski, 1993
+    - Ritzel et al., 1994
+    - Srinivas & Deb, 1994
