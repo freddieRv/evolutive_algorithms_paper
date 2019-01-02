@@ -1,9 +1,9 @@
 #!/bin/bash
 
-pdflatex evolutive_algorithms.tex > custom.log
+pdflatex -output-directory paper/ paper/evolutive_algorithms.tex > custom.log
 printf "\n#########################################################################\n\n" >> custom.log
-bibtex evolutive_algorithms.aux >> custom.log
+bibtex paper/evolutive_algorithms.aux >> custom.log
 printf "\n#########################################################################\n\n" >> custom.log
-pdflatex evolutive_algorithms.tex >> custom.log
+pdflatex -output-directory paper/ paper/evolutive_algorithms.tex >> custom.log
 printf "\n#########################################################################\n\n" >> custom.log
-pdflatex evolutive_algorithms.tex >> custom.log
+pdflatex -output-directory paper/ paper/evolutive_algorithms.tex >> custom.log
