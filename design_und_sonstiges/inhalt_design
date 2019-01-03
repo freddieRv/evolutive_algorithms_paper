@@ -6,15 +6,6 @@
 - What is optimization, why is it important and hard
 - EA as a good way to approach optimization problems
 
-///////////////////////////////////////////////////////////////////////////////////
-(Maybe)
-Begriffserklährungen:
-    - Optimierung
-    - Evolution
-    - Intelligenz
-(Would reduce Haupteil)
-///////////////////////////////////////////////////////////////////////////////////
-
 ## Stand der Forschung
 - Algunos historicos
     + Desde hace cuanto los AE son "un tema"
@@ -25,7 +16,7 @@ Begriffserklährungen:
 - Optimization
     + What is it
     + (Un-)constrained, (multi- | uni-)modal
-    + Mention common problems, and explain why iteration doesn't work (TSP and the number of possibilities with few nodes)
+    + Mention common problems
 - Que es un AE
     + Elementos principales de un AE
         * Poblacion de soluciones candidatas

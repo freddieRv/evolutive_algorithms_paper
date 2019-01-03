@@ -60,6 +60,8 @@
 
 \usepackage{hyperref} % For hyperlinks in the PDF
 
+\newcommand{\e}[1]{\times 10^{#1}}
+
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
@@ -95,10 +97,12 @@
 
 \section{Einleitung}
 
-\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
-\blindtext % Dummy text
+\lettrine[nindent=0em,lines=3]{D}as Problem des Handlungsreisenden (engl. traveling salesman problem oder TSP) ist ein sehr bekanntes und studierte Problem in dem Informatik-Bereich und es geht wie folgendes:\\
+Es muss eine Reihenfolge für den Besuch mehrerer Orte so gewählt sein, dass keine Station außer der ersten mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz, und die erste Station gleich der letzten Station ist. \cite{wiki_tsp}\\
+Sei $n$ der Zahl der Stationen, es gibt $(n-1)!$ mögliche Lösungen für das TSP. Das heißt, dass für $n=4$ es gibt $6$ mögliche Lösungen. Es ist nicht schwer einen brute-force Ansatz zu verfolgen für ein Problem das nur 6 Lösungen hat. Aber wenn $n=50$ es gibt circa $6.1\e{62}$ Lösungen! Folgendes ist hilfreich, um diese Anzahl in eine Perspektive zu setzen: Das Universum ist circa 15 Milliarde Jahre alt, das ist $4.7\e{17}$ Sekunden. Wenn es eine Billion Rechner gäbe, die jeder einzeln seit dem Anfang des Universums eine Billion Lösungen pro Sekunde berechnete. Bisher wären nur $4.7\e{41}$ Lösungen berechnet worden.\\
+Das TSP gehört zu den kombinatorischen Problemen, für die einfach keine brute-force Ansatz möglich ist. Es ist in diesem Fall, dass evolutionärer Algorithmen (EA) hilfreich sind.\\
+EA sind eine gute Werkzeug um gute Lösungen zu finden. Natürlich können wir nicht sicher sein, dass wir das beste Lösung gefunden haben, außer wenn wir jeder mögliche Lösungen berechnen haben. Aber wie es mit letzte Beispiel gezeigt ist, es ist nicht immer möglich alle mögliche Lösungen zu finden.
 
-\blindtext % Dummy text
 
 %------------------------------------------------
 
@@ -169,7 +173,6 @@
 
 \lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
 \blindtext % Dummy text
-\cite{someref}
 
 \blindtext % Dummy text
 
