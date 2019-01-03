@@ -16,7 +16,6 @@
 - Optimization
     + What is it
     + (Un-)constrained, (multi- | uni-)modal
-    + Mention common problems
 - Que es un AE
     + Elementos principales de un AE
         * Poblacion de soluciones candidatas
@@ -38,8 +37,8 @@
     + Algún algoritmo basado en un fenómeno social o algo que tenga que ver con música
     + Mencionar (solo por nombre y abreviación y, si se puede, referencia a donde se mencionaron por primera vez) tres chingos de algoritmos
     + Mencionar algunos benchmarks
-- Usos y aplicaciones
-    + Real life areas (like medicine, building motors or planes, etc)
+- Usos y aplicaciones (Funktionsweise)
+    + Real life areas (like medicine, building motors or planes, etc. El cap 2 de la Dra. Alma tiene genau das! Folien 6 - 14)
 
 ## Diskussion - Vor- und Nachteile
 - What are they good for and what are they not good for

@@ -12,7 +12,6 @@
 %
 % License:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
@@ -103,7 +102,7 @@
 
 \lettrine[nindent=0em,lines=3]{D} as Problem des Handlungsreisenden (engl. traveling salesman problem oder TSP) ist ein sehr bekanntes und studierte Problem in dem Informatik-Bereich und es geht wie folgendes:\\
 Es muss eine Reihenfolge für den Besuch mehrerer Orte so gewählt sein, dass keine Station außer der ersten mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz, und die erste Station gleich der letzten Station ist. \cite{wiki_tsp}\\
-Sei $n$ die Anzahl der Stationen, es gibt $(n-1)!$ mögliche Lösungen für das TSP. Das heißt, dass für $n=4$ es gibt $6$ mögliche Lösungen. Es ist nicht schwer einen brute-force Ansatz zu verfolgen für ein Problem, das nur 6 Lösungen hat. Aber wenn $n=50$ es gibt circa $6.1\e{62}$ Lösungen! Folgendes ist hilfreich, um diese Anzahl in eine Perspektive zu setzen: Das Universum ist circa 15 Milliarde Jahre alt, das ist $4.7\e{17}$ Sekunden. Wenn es eine Billion Rechner gäbe, die jeder einzeln seit dem Anfang des Universums eine Billion Lösungen pro Sekunde berechnete. Bisher wären nur $4.7\e{41}$ Lösungen berechnet worden.\\
+Sei $n$ die Anzahl der Stationen, es gibt $(n-1)!$ mögliche Lösungen für das TSP. Das heißt, dass für $n=4$ es gibt $6$ mögliche Lösungen. Es ist nicht schwer einen brute-force Ansatz zu verfolgen für ein Problem, das nur 6 Lösungen hat. Aber wenn $n=50$ es gibt circa $6,1\e{62}$ Lösungen! Folgendes ist hilfreich, um diese Anzahl in eine Perspektive zu setzen: Das Universum ist circa 15 Milliarde Jahre alt, das ist $4,7\e{17}$ Sekunden. Wenn es eine Billion Rechner gäbe, die jeder einzeln seit dem Anfang des Universums eine Billion Lösungen pro Sekunde berechnete. Bisher wären nur $4,7\e{41}$ Lösungen berechnet worden.\\
 Das TSP ist nur ein Beispiel von vielfältigen Probleme, die zu den kombinatorischen Problemen gehören, das heißt, Probleme für die einfach keine brute-force Ansatz möglich ist. Es ist in diesem Fall, dass evolutionärer Algorithmen (EA) hilfreich sind.\\
 EA sind eine gute Werkzeug um gute Lösungen zu finden. Natürlich können wir nicht sicher sein, dass wir das beste Lösung gefunden haben, außer wenn wir jeder mögliche Lösungen berechnen haben. Aber wie es mit obenen Beispiel gezeigt ist, es ist nicht immer möglich alle mögliche Lösungen zu finden.
 
@@ -140,15 +139,24 @@ Die Zielfunktion(en) hat/haben mehrere Minima bzw. Maxima. Abbildung \ref{fig:ra
 \end{figure}
 
 Eine der wichtigste und schwersten Teile der Optimierung ist es, eine geeignete Zielfunktion zu definieren, die alle die wichtige zu optimieren Faktore berücksichtigt.
-Probleme im wirklichen Leben sind normalerweise eingeschränkt, multi-Objective und multi-modale, oder mit eine hoch Anzahl von Dimensionen. Wegen diesen Eigenschaften der Zielfunktionen und der Optimierungsprobleme ist es schwer eine gute Lösung mittels traditionelle Vorgänge  zu finden. EAs sind aber eine gute Möglichkeit, um diese Art von Probleme zu lösen.
+Probleme im wirklichen Leben sind normalerweise eingeschränkt, multi-Objective und multi-modale, oder mit eine hoch Anzahl von Dimensionen. Wegen diesen Eigenschaften der Zielfunktionen und der Optimierungsprobleme ist es schwer eine gute Lösung mittels traditionelle Vorgänge  zu finden. EA sind aber eine gute Möglichkeit, um diese Art von Probleme zu lösen.
+
 %------------------------------------------------
 
 \section{Was ist ein evolutionärer Algorithmus?}
 
-\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
-\blindtext % Dummy text
+\lettrine[nindent=0em,lines=3]{D} er EA-Bereich ist ziemlich neu, deswegen gibt es bisher keine allgemein akzeptierte Definition von evolutionäre Algorithmus. EA sind zwar als teil des KIs betrachtet, aber genau wo sie in Verbindung mit anderen KI-Methoden stehen ist von dem Autor abhängig. Abbildung \ref{fig:metaheuristics} zeigt eine von mehrere mögliche Klassifikationen von KI-Methoden in Bezug auf Metaheuristics (welche über den Rahmen dieses Papiers hinausgehen).\\
 
-\blindtext % Dummy text
+\begin{figure}[h]
+\caption{ Klassifikation von Metaheuristics.}
+\label{fig:metaheuristics}
+\centering
+\includegraphics[width=0.5\textwidth]{../images/metaheuristics_classification.png}
+\end{figure}
+
+In Abbildung \ref{fig:metaheuristics} können wir es auch sehen, wie der Autor betrachtet Particle Swarm Optimization (PSO) und Ant Colony Optimization (ACO) nicht als EA, trotzdem gibt es andere Autoren \cite{wiley_evolutionary}, die sie für genau EA halten.
+
+In diesem Paper wird folgende Definition für EA genommen: Ein Algorithmus, der durch viele Iterationen die Lösung eines Problems entwickelt.
 
 %------------------------------------------------
 
@@ -157,15 +165,13 @@ Probleme im wirklichen Leben sind normalerweise eingeschränkt, multi-Objective 
 \lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
 \blindtext % Dummy text
 
-\subsection{ABC}
+\subsection{GA}
+\blindtext % Dummy text
+
+\subsection{PSO}
 \blindtext % Dummy text
 
 \subsection{DE}
-\blindtext % Dummy text
-
-\subsection{GSA}
-\blindtext % Dummy text
-
 \blindtext % Dummy text
 
 %------------------------------------------------
@@ -195,7 +201,7 @@ Probleme im wirklichen Leben sind normalerweise eingeschränkt, multi-Objective 
 
 \blindtext % Dummy text
 
-%----------------------------------------------------------------------------------------    
+%----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
 

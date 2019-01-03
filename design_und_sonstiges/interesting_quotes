@@ -13,9 +13,6 @@ Un sistema de IA debe ser capaz de realizar tres cosas:
     - Adquirir nuevo conocimiento a través de la experiencia
         ~ Capítulo 1, diapositiva 31 ~
 
-(Cost | Fitness) | Objective function
-    ~ Capítulo 2, diapositiva 34 ~
-
 Características de la inteligencia:
     - Adaptación
     - Aleatoriedad
