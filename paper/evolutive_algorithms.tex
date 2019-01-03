@@ -62,6 +62,10 @@
 
 \newcommand{\e}[1]{\times 10^{#1}}
 
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
@@ -97,7 +101,7 @@
 
 \section{Einleitung}
 
-\lettrine[nindent=0em,lines=3]{D}as Problem des Handlungsreisenden (engl. traveling salesman problem oder TSP) ist ein sehr bekanntes und studierte Problem in dem Informatik-Bereich und es geht wie folgendes:\\
+\lettrine[nindent=0em,lines=3]{D} as Problem des Handlungsreisenden (engl. traveling salesman problem oder TSP) ist ein sehr bekanntes und studierte Problem in dem Informatik-Bereich und es geht wie folgendes:\\
 Es muss eine Reihenfolge für den Besuch mehrerer Orte so gewählt sein, dass keine Station außer der ersten mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz, und die erste Station gleich der letzten Station ist. \cite{wiki_tsp}\\
 Sei $n$ die Anzahl der Stationen, es gibt $(n-1)!$ mögliche Lösungen für das TSP. Das heißt, dass für $n=4$ es gibt $6$ mögliche Lösungen. Es ist nicht schwer einen brute-force Ansatz zu verfolgen für ein Problem, das nur 6 Lösungen hat. Aber wenn $n=50$ es gibt circa $6.1\e{62}$ Lösungen! Folgendes ist hilfreich, um diese Anzahl in eine Perspektive zu setzen: Das Universum ist circa 15 Milliarde Jahre alt, das ist $4.7\e{17}$ Sekunden. Wenn es eine Billion Rechner gäbe, die jeder einzeln seit dem Anfang des Universums eine Billion Lösungen pro Sekunde berechnete. Bisher wären nur $4.7\e{41}$ Lösungen berechnet worden.\\
 Das TSP ist nur ein Beispiel von vielfältigen Probleme, die zu den kombinatorischen Problemen gehören, das heißt, Probleme für die einfach keine brute-force Ansatz möglich ist. Es ist in diesem Fall, dass evolutionärer Algorithmen (EA) hilfreich sind.\\
@@ -110,17 +114,33 @@ EA sind eine gute Werkzeug um gute Lösungen zu finden. Natürlich können wir n
 \lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
 \blindtext % Dummy text
 
-\blindtext % Dummy text
-
 %------------------------------------------------
 
 \section{Optimierung}
 
-\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
-\blindtext % Dummy text
+\lettrine[nindent=0em,lines=3]{I} n dem Mathematik-Bereich, Optimierung bedeutet die Findung von Parametern eines Systems, die ein bestmögliches Ergebnis erzielen. \cite{wiki_optimierung} Wir können diese Findung von Parametern auch wie Folgendes definieren: Die Auswahl von die bestmögliche Lösung eines Problems von einer Menge mögliche Lösungen.\\
+In Optimierungsprobleme wird eine Zielfunktion (engl. objective function) definiert, die entweder maximiert oder minimiert werden soll. Die Zielfunktion wird ``Kosten-Funktion'' oder ``Fitness-Funktion'' in Maximierung- und Minimierungsprobleme bzw. genannt.\\
+Sei $f(x)$ ein Zielfunktion, $x$ ist ein Vektor und wird Entscheidungsvariable genannt. Die Anzahl von Elementen in $x$ wird die Dimension des Problems genannt.\\
+Es gibt verschiedene Klassifizierungen oder Arten von Optimierung:
 
-\blindtext % Dummy text
+\begin{itemize}
+\item{Eingeschränkt Optimierung}\\
+Die Entscheidungsvariable kann nicht irgendwelcher Wert nehmen. Es gibt Einschränkungen dafür.\\
+\item{Multi-objective Optimierung}\\
+Das Problem besteht aus vielfältigen, voneinander unabhängig Zielfunktionen.\\
+\item{Multi-modal Optimierung}\\
+Die Zielfunktion(en) hat/haben mehrere Minima bzw. Maxima. Abbildung \ref{fig:rastrigin} zeigt eine multi-modale Funktion.
+\end{itemize}
 
+\begin{figure}[h]
+\caption{ Rastrigin function.}
+\label{fig:rastrigin}
+\centering
+\includegraphics[width=0.5\textwidth]{../images/rastrigin_function.png}
+\end{figure}
+
+Eine der wichtigste und schwersten Teile der Optimierung ist, eine geeignete Zielfunktion zu definieren, die alle die wichtige zu optimieren Faktore berücksichtigt.
+Probleme im wirklichen Leben sind normalerweise Eingeschränkt, multi-Objective und multi-modale, oder mit eine hoch Anzahl von Dimensionen.
 %------------------------------------------------
 
 \section{Was ist ein evolutionärer Algorithmus?}
