@@ -83,7 +83,7 @@
 \date{} % Leave empty to omit a date
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
-\noindent In diesem Paper wird es darüber diskutiert, sowohl was Optimierung ist und warum ist es schwer, als auch was evolutionärer Algorithmen (EA) sind und wie, warum,  und wann sind sie hilfreich in dem Optimierung-Bereich. Es wird auch im Detail erklärt, wie EA funktionieren und warum sind sie als teil des künstlichen Intelligenz (KI) betrachtet. Es werden auch einige bekannten EA präsentiert und leicht erklärt. Am ende wird es darüber diskutiert, was für Vor- und Nachteile die EA haben.
+\noindent In diesem Paper wird es darüber diskutiert, sowohl was Optimierung ist und warum ist es schwer, als auch was evolutionärer Algorithmen (EA) sind und wie, warum,  und wann sind sie hilfreich in dem Optimierung-Bereich. Es wird auch im Detail erklärt, wie EA funktionieren und warum sind sie als teil des künstlichen Intelligenz (KI) betrachtet. Es werden auch einige bekannten EA präsentiert und oberflächlich erklärt. Am ende wird es darüber diskutiert, was für Vor- und Nachteile die EA haben.
 \end{abstract}
 }
 
@@ -138,7 +138,7 @@ Die Zielfunktion(en) hat/haben mehrere Minima bzw. Maxima. Abbildung \ref{fig:ra
 \includegraphics[width=0.5\textwidth]{images/rastrigin_function.png}
 \end{figure}
 
-Eine der wichtigste und schwersten Teile der Optimierung ist es, eine geeignete Zielfunktion zu definieren, die alle die wichtige zu optimieren Faktore berücksichtigt.
+Eine der wichtigsten und schwersten Teile der Optimierung ist es, eine geeignete Zielfunktion zu definieren, die alle die wichtige zu optimieren Faktoren berücksichtigt.
 Probleme im wirklichen Leben sind normalerweise eingeschränkt, multi-Objective und multi-modale, oder mit eine hoch Anzahl von Dimensionen. Wegen diesen Eigenschaften der Zielfunktionen und der Optimierungsprobleme ist es schwer eine gute Lösung mittels traditionelle Vorgänge  zu finden. EA sind aber eine gute Möglichkeit, um diese Art von Probleme zu lösen.
 
 %------------------------------------------------
@@ -158,20 +158,68 @@ In Abbildung \ref{fig:metaheuristics} können wir es auch sehen, wie der Autor b
 
 In diesem Paper wird folgende Definition für EA genommen: Ein Algorithmus, der durch viele Iterationen die Lösung eines Problems entwickelt.
 
+\subsection{Eigenschaften der EA}
+Es gibt drei Hauptmerkmale der EA:
+
+\begin{itemize}
+\item Eine - so genannte - Bevölkerung von mögliche Lösungen
+\item Vorgänge, die Elementen der Bevölkerung betreffen oder verändern
+\item Ein Auswahlmechanismus
+\item Eine Zielfunktion
+\end{itemize}
+
+Die meisten EA sind aus die Natur inspiriert, das heißt, dass Wissenschaftler Ereignisse, Systeme, und Mechanismen von der Natur beobachten und danach versuchen einigermaßen, sie mit Algorithmen zu reproduzieren. Sie heißen ``evolutionär'', denn sie sind ursprünglich aus der Evolution inspiriert. \cite{holland_ga}\\
+
+In \cite{wiley_evolutionary} werden Folgende Eigenschaften von Intelligenz genannt:
+
+\begin{itemize}
+\item Adaptation\\
+EA müssen adaptierbar zu verschiedenen Probleme sein. Adaptation alleine ist nicht reichend, um ein System als intelligent zu betrachten.\\
+\item Zufälligkeit\\
+Obwohl Zufälligkeit meistens als eine schlechte Eigenschaft betrachtet wird, es ist einigermaßen notwendig, um neue Lösungen eines Problems zu finden.\\
+\item Kommunikation\\
+Eine einzige Ameise ist nicht wirklich als intelligent betrachtet, aber eine Ameisenkolonie ist meistens (dank Kommunikation durch Pheromone) als super-intelligent Einheit überlegt.\\
+\item Rückmeldung\\
+Ein System kann sich nicht anpassen und verbessern, wenn es seine Umgebung nicht erkennen und darauf reagieren kann. Auch um zu lernen, muss ein System seine Fehler (mittels Rückmeldung) erkennen.\\
+\item Erkundung\\
+Das heißt neue Lösungen finden, neue Wege erkunden.\\
+\item Ausbeutung\\
+Im Gegenteil zu Erkundung, Ausbeutung heißt, schon bekannten Lösungen und Wege ausnutzen.\\
+\end{itemize}
+
+In nächster Sektion werden verschiedene Beispiele von EA gezeigt und in jeder Beispiel wird es erwähnt, welcher Teil des Algorithmuses welche Eigenschaft des Intelligenzes repräsentiert. Es ist auch wichtig zu sagen, dass nicht alle Eigenschaften des Intelligenzes von jeder EA repliziert sind.
+
 %------------------------------------------------
 
-\section{EA Beisspiele}
+\section{EA Beispiele}
 
-\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
+Wie gesagt, heutzutage gibt es aber viele EA und jedes Jahr werden neue entwickelt. In dieser Sektion werden nur ein paar der bekanntesten und wichtigsten erwähnt und oberflächlich erklärt.
+
+\subsection{Genetic Algorithms - GA}
+GA sind ursprünglich in \cite{holland_ga} präsentiert und danach in \cite{goldberg_ga} weiter entwickelt. Der Name ``Genetic Algorithms'' bezieht sich mehr auf eine Familie von Algorithmen als auf einen einzigen Algorithmus.\\
+Es gibt sechs Hauptteile eines GAs:
+
+\begin{enumerate}
+\item Codierung der Lösungen\\
+In dem ersten Schritt muss man eine geeignete Codierung für die mögliche Lösungen finden. Das heißt einfach, eine Darstellung für die Lösungen finden, die einfach zu verarbeiten ist. Eine die am meistens verwendeten Codierungen ist eine Bit-Folge. In dieser Codierung, jeder Bit wird ``Gen'' genannt.\\
+\item Ursprüngliche Bevölkerung\\
+Eine ursprüngliche Bevölkerung muss initialisiert werden. Diese Initialisierung kann entweder zufällig oder auf vorher Kenntnisse basiert sein. Wie viele Elementen die Bevölkerung hat, ist ein wichtige Parameter. Je mehrere Elemente desto eine bessere Wahrscheinlichkeit um eine gute Lösung zu finden.
+\item Fitnessfunktion\\
+Die Fitnessfunktion soll ein Element der Bevölkerung als Eingabe nehmen und die Fitness der Element ergeben.
+\item Auswahl von Einzelnen\\
+Zwei Elemente der Bevölkerung werden ausgewählt, um ein neue Element herzustellen. Das Verfahren um die Elemente auszuwählen kann entweder zufällig oder auf die Fitness der Elemente basiert sein. Die ausgewählte Elemente werden ``Eltern'' genannt.
+\item Crossover\\
+Dies ist der wichtigste Schritt von der GA. Er definiert wie das neue Element aus die zwei vorher ausgewählte Elemente erstellt wird. Das heißt einfach, welche Gene wird das neue Element von jeden Elternteil erben.
+\item Mutation\\
+Einige zufälligerweise-ausgewählt neue erstellt Elemente werden mutieren. Das heißt, dass einige Bits gekippt werden. Wie viele und welche Bits werden gekippt, kann mittels verschiedene Verfahren entscheidet werden.
+\end{enumerate}
+
+Die Schritte werden beliebig Mehrmals wiederholt, oder bis eine Halt-Bedingung getroffen ist.
+
+\subsection{Particle Swarm Optimization - PSO}
 \blindtext % Dummy text
 
-\subsection{GA}
-\blindtext % Dummy text
-
-\subsection{PSO}
-\blindtext % Dummy text
-
-\subsection{DE}
+\subsection{Differential Evolution - DE}
 \blindtext % Dummy text
 
 %------------------------------------------------
@@ -181,8 +229,6 @@ In diesem Paper wird folgende Definition für EA genommen: Ein Algorithmus, der 
 \lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
 \blindtext % Dummy text
 
-\blindtext % Dummy text
-
 %------------------------------------------------
 
 \section{Diskussion}
@@ -190,15 +236,11 @@ In diesem Paper wird folgende Definition für EA genommen: Ein Algorithmus, der 
 \lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
 \blindtext % Dummy text
 
-\blindtext % Dummy text
-
 %------------------------------------------------
 
 \section{Fazit}
 
 \lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
-\blindtext % Dummy text
-
 \blindtext % Dummy text
 
 %----------------------------------------------------------------------------------------
