@@ -117,9 +117,11 @@ EA sind eine gute Werkzeug um gute Lösungen zu finden. Natürlich können wir n
 
 \section{Optimierung}
 
-\lettrine[nindent=0em,lines=3]{I} n dem Mathematik-Bereich, Optimierung bedeutet die Findung von Parametern eines Systems, die ein bestmögliches Ergebnis erzielen. \cite{wiki_optimierung} Wir können diese Findung von Parametern auch wie Folgendes definieren: Die Auswahl von die bestmögliche Lösung eines Problems von einer Menge mögliche Lösungen.\\
-In Optimierungsprobleme wird eine Zielfunktion (engl. objective function) definiert, die entweder maximiert oder minimiert werden soll. Die Zielfunktion wird ``Kosten-Funktion'' oder ``Fitness-Funktion'' in Maximierung- und Minimierungsprobleme bzw. genannt.\\
-Sei $f(x)$ ein Zielfunktion, $x$ ist ein Vektor und wird Entscheidungsvariable genannt. Die Anzahl von Elementen in $x$ wird die Dimension des Problems genannt.\\
+\lettrine[nindent=0em,lines=3]{I} n dem Mathematik-Bereich, Optimierung bedeutet die Findung von Parametern eines Systems, die ein bestmögliches Ergebnis erzielen. \cite{wiki_optimierung} Wir können diese Findung von Parametern auch wie Folgendes definieren: Die Auswahl von die bestmögliche Lösung eines Problems von einer Menge mögliche Lösungen.\par
+In Optimierungsprobleme wird eine Zielfunktion (engl. objective function) definiert, die entweder maximiert oder minimiert werden soll. Die Zielfunktion wird ``Kosten-Funktion'' oder ``Fitness-Funktion'' in Maximierung- und Minimierungsprobleme bzw. genannt.\par
+Sei $f(x)$ ein Zielfunktion, $x$ ist ein Vektor und wird ``Entscheidungsvariable'' genannt. Die Anzahl von Elementen in $x$ wird die Dimension des Problems genannt.
+Die Domäne der Zielfunktion repräsentiert die mögliche Lösungen des Problems. \par
+Das Ziel der Optimierung ist es denn, die bestmögliche Lösung des Problems zu finden, das heißt, einen Wert für die Entscheidungsvariable zu finden, sodass die Zielfunktion einen maximal bzw. minimal Wert ergibt.\par
 Es gibt verschiedene Klassifizierungen oder Arten von Optimierung:
 
 \begin{itemize}
@@ -162,10 +164,11 @@ In diesem Paper wird folgende Definition für EA genommen: Ein Algorithmus, der 
 Folgende sind die Hauptmerkmale der EA:
 
 \begin{itemize}
-\item{Eine - so genannte - Bevölkerung von mögliche Lösungen.}
-\item{Vorgänge, die Elementen der Bevölkerung betreffen oder verändern.}
-\item{Ein Auswahlmechanismus.}
-\item{Eine Zielfunktion.}
+\item{Eine Zielfunktion.}\\
+\item{Eine - so genannte - Bevölkerung von mögliche Lösungen.}\\
+Eine Menge von Darstellungen der Lösungen (Elemente der Domäne der Zielfunktion) des Problems, die mittels der Algorithmus und mehrere Iterationen verarbeitet und hoffentlich verbessert werden.\\
+\item{Vorgänge, die Elementen der Bevölkerung betreffen oder verändern.}\\
+Diese können der Algorithmus selber oder ein äußern Verfahren sein.
 \end{itemize}
 
 Die meisten EA sind aus die Natur inspiriert, das heißt, dass Wissenschaftler Ereignisse, Systeme, und Mechanismen von der Natur beobachten und danach versuchen einigermaßen, sie mit Algorithmen zu reproduzieren. Sie heißen ``evolutionär'', denn sie sind ursprünglich aus der Evolution inspiriert. \cite{holland_ga}\\
@@ -200,24 +203,24 @@ Genetic Algotihmen (GA) sind ursprünglich in \cite{holland_ga} präsentiert und
 Es gibt sechs Hauptteile eines GAs:
 
 \begin{enumerate}
-\item{Codierung der Lösungen.}\\
+\item{Codierung der Lösungen.}\par
 Als erstes muss man eine geeignete Codierung für die mögliche Lösungen finden. Das heißt einfach, eine Darstellung für die Lösungen finden, die einfach zu verarbeiten ist. Eine die am meistens verwendeten Codierungen ist eine Bit-Folge. In dieser Codierung, jeder Bit wird ``Gen'' genannt.
-\item{Ursprüngliche Bevölkerung.}\\
+\item{Ursprüngliche Bevölkerung.}\par
 Eine ursprüngliche Bevölkerung muss initialisiert werden. Diese Initialisierung kann entweder zufällig oder auf vorher Kenntnisse basiert sein. Wie viele Elementen die Bevölkerung hat, ist ein wichtige Parameter. Je mehrere Elemente desto eine bessere Wahrscheinlichkeit um eine gute Lösung zu finden.
-\item{Fitnessfunktion.}\\
-Die Fitnessfunktion soll ein Element der Bevölkerung als Eingabe nehmen und die Fitness der Element ergeben.
-\item{Auswahl von Einzelnen.}\\
+\item{Fitnessfunktion.}\par
+Die Zielfunktion des Problems. Der Wert, den die Zielfunktion ergibt, wenn sie für den Wert ausgewertet wird, den ein Element der Bevölkerung darstellt, wird die Fitness des Elements genannt.
+\item{Auswahl von Einzelnen.}\par
 Zwei Elemente der Bevölkerung werden ausgewählt, um ein neue Element herzustellen. Das Verfahren um die Elemente auszuwählen kann entweder zufällig oder auf die Fitness der Elemente basiert sein. Die ausgewählte Elemente werden ``Eltern'' genannt.
-\item{Crossover.}\\
+\item{Crossover.}\par
 Dies ist das wichtigste Teil eines GAs. Es definiert wie das neue Element aus die zwei vorher ausgewählte Elemente erstellt wird. Das heißt einfach, welche Gene wird das neue Element von jeden Elternteil erben.
-\item{Mutation.}\\
+\item{Mutation.}\par
 Einige zufälligerweise-ausgewählt neue erstellt Elemente werden mutieren. Das heißt, dass einige Bits gekippt werden. Welche Elemente mutiert werden und wie viele und welche Bits werden gekippt, kann mittels verschiedene Verfahren entscheidet werden.
 \end{enumerate}
 
 Abbildung \ref{fig:ga_pseudo} zeigt den Pseudo-code eines GAs.
 
 \begin{figure}[h]
-\caption{ Genetic Algorithmen pseudo-Code. Quelle: \cite{wiley_evolutionary}}
+\caption{ Wesentlich genetic Algorithmen pseudo-Code. Quelle: \cite{wiley_evolutionary}}
 \label{fig:ga_pseudo}
 \centering
 \includegraphics[width=0.5\textwidth]{images/ga_pseudo.png}
@@ -228,7 +231,7 @@ In Teil 2 sowie in Teile 4 bis 6 kann Zufälligkeit verwendet werden, je nachdem
 In der Mutation-Teil, eine hoch Wahrscheinlichkeit um Elemente zu mutieren heißt viele Erkundung und weniger Ausbeutung und umgekehrt.
 
 \subsection{Particle Swarm Optimization - PSO}
-Particle Swarm Optimization (PSO) Algorithmus wird ursprünglich in \cite{kennedy_pso} und in \cite{shi_pso} präsentiert
+Particle Swarm Optimization (PSO) Algorithmus wird ursprünglich in \cite{kennedy_pso} und in \cite{shi_pso} präsentiert.
 
 \subsection{Differential Evolution - DE}
 \blindtext % Dummy text
@@ -259,7 +262,7 @@ Particle Swarm Optimization (PSO) Algorithmus wird ursprünglich in \cite{kenned
 %----------------------------------------------------------------------------------------
 
 \renewcommand{\refname}{Quellenverzeichnis}
-\bibliographystyle{alpha}
+\bibliographystyle{alpha} %unsrtnat
 
 \bibliography{quellenverzeichnis}
 
