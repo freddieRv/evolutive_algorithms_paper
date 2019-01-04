@@ -184,7 +184,7 @@ Ein System kann sich nicht anpassen und verbessern, wenn es seine Umgebung nicht
 \item Erkundung\\
 Das heißt neue Lösungen finden, neue Wege erkunden.\\
 \item Ausbeutung\\
-Im Gegenteil zu Erkundung, Ausbeutung heißt, schon bekannten Lösungen und Wege ausnutzen.\\
+Im Gegenteil zu Erkundung, Ausbeutung heißt, schon bekannten Lösungen und Wege ausnutzen.
 \end{itemize}
 
 In nächster Sektion werden verschiedene Beispiele von EA gezeigt und in jeder Beispiel wird es erwähnt, welcher Teil des Algorithmuses welche Eigenschaft des Intelligenzes repräsentiert. Es ist auch wichtig zu sagen, dass nicht alle Eigenschaften des Intelligenzes von jeder EA repliziert sind.
@@ -201,7 +201,7 @@ Es gibt sechs Hauptteile eines GAs:
 
 \begin{enumerate}
 \item Codierung der Lösungen\\
-In dem ersten Schritt muss man eine geeignete Codierung für die mögliche Lösungen finden. Das heißt einfach, eine Darstellung für die Lösungen finden, die einfach zu verarbeiten ist. Eine die am meistens verwendeten Codierungen ist eine Bit-Folge. In dieser Codierung, jeder Bit wird ``Gen'' genannt.\\
+Als erstes muss man eine geeignete Codierung für die mögliche Lösungen finden. Das heißt einfach, eine Darstellung für die Lösungen finden, die einfach zu verarbeiten ist. Eine die am meistens verwendeten Codierungen ist eine Bit-Folge. In dieser Codierung, jeder Bit wird ``Gen'' genannt.
 \item Ursprüngliche Bevölkerung\\
 Eine ursprüngliche Bevölkerung muss initialisiert werden. Diese Initialisierung kann entweder zufällig oder auf vorher Kenntnisse basiert sein. Wie viele Elementen die Bevölkerung hat, ist ein wichtige Parameter. Je mehrere Elemente desto eine bessere Wahrscheinlichkeit um eine gute Lösung zu finden.
 \item Fitnessfunktion\\
@@ -209,12 +209,23 @@ Die Fitnessfunktion soll ein Element der Bevölkerung als Eingabe nehmen und die
 \item Auswahl von Einzelnen\\
 Zwei Elemente der Bevölkerung werden ausgewählt, um ein neue Element herzustellen. Das Verfahren um die Elemente auszuwählen kann entweder zufällig oder auf die Fitness der Elemente basiert sein. Die ausgewählte Elemente werden ``Eltern'' genannt.
 \item Crossover\\
-Dies ist der wichtigste Schritt von der GA. Er definiert wie das neue Element aus die zwei vorher ausgewählte Elemente erstellt wird. Das heißt einfach, welche Gene wird das neue Element von jeden Elternteil erben.
+Dies ist das wichtigste Teil eines GAs. Es definiert wie das neue Element aus die zwei vorher ausgewählte Elemente erstellt wird. Das heißt einfach, welche Gene wird das neue Element von jeden Elternteil erben.
 \item Mutation\\
-Einige zufälligerweise-ausgewählt neue erstellt Elemente werden mutieren. Das heißt, dass einige Bits gekippt werden. Wie viele und welche Bits werden gekippt, kann mittels verschiedene Verfahren entscheidet werden.
+Einige zufälligerweise-ausgewählt neue erstellt Elemente werden mutieren. Das heißt, dass einige Bits gekippt werden. Welche Elemente mutiert werden und wie viele und welche Bits werden gekippt, kann mittels verschiedene Verfahren entscheidet werden.
 \end{enumerate}
 
-Die Schritte werden beliebig Mehrmals wiederholt, oder bis eine Halt-Bedingung getroffen ist.
+Abbildung \ref{fig:ga_pseudo} zeigt den Pseudo-code eines GAs.
+
+\begin{figure}[h]
+\caption{ Genetic Algorithmen pseudo-Code.}
+\label{fig:ga_pseudo}
+\centering
+\includegraphics[width=0.5\textwidth]{images/ga_pseudo.png}
+\end{figure}
+
+Bei GA ist Adaptation anwesend, denn diese Art von Algorithmen ist Problem-unabhängig. Mit anderen Wörter, wenn es eine geeignete Darstellung der Lösungen gibt, kann das Problem mit GA optimiert wird.\\
+In Teil 2 sowie in Teile 4 bis 6 kann Zufälligkeit verwendet werden, je nachdem welche Verfahren bzw. ausgewählt wird.\\
+In der Mutation-Teil, eine hoch Wahrscheinlichkeit um Elemente zu mutieren heißt viele Erkundung und weniger Ausbeutung und umgekehrt.
 
 \subsection{Particle Swarm Optimization - PSO}
 \blindtext % Dummy text
