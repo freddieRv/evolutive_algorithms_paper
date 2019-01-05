@@ -29,21 +29,18 @@
         * Because eras/generaciones, bitch!
 - Algunos AE actuales (Breve explicación de genau como funcionan. Tal vez poner pseudo-codigo para uno o dos algoritmos)
     + AG
-    + ABC
     + PSO
-    + ACO
     + DE
-    + GSA
-    + Algún algoritmo basado en un fenómeno social o algo que tenga que ver con música
-    + Mencionar (solo por nombre y abreviación y, si se puede, referencia a donde se mencionaron por primera vez) tres chingos de algoritmos
-    + Mencionar algunos benchmarks
-- Usos y aplicaciones (Funktionsweise)
-    + Real life areas (like medicine, building motors or planes, etc. El cap 2 de la Dra. Alma tiene genau das! Folien 6 - 14)
 
 ## Diskussion - Vor- und Nachteile
 - What are they good for and what are they not good for
     + Hay un quote interesante sobre esto casi al final de una de las diapositivas de la Dr. Alma
+    + Real life areas (like medicine, building motors or planes, etc. El cap 2 de la Dra. Alma tiene genau das! Folien 6 - 14)
 - Like any other IA technique, EA work better combined in a hybrid system
 - Als Nachteil: the tunning of params could present a hard problem itself.
 
 ## Zusammenfasung
+- There's practically no limit to where they can be used.
+- Thanks to the computational power available today, we can solve more and more complicated problems.
+- We have to keep looking at the nature for inspiration.
+    + Nature has proven itself once again as the best muse.
