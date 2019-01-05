@@ -136,7 +136,7 @@ Die Zielfunktion(en) hat/haben mehrere Minima bzw. Maxima. Abbildung \ref{fig:ra
 \end{itemize}
 
 \begin{figure}[h]
-\caption{ Rastrigin function. Quelle: \url{https://commons.wikimedia.org/wiki/File:Rastrigin_function.png}}
+\caption{Rastrigin function. Quelle: \url{https://commons.wikimedia.org/wiki/File:Rastrigin_function.png}}
 \label{fig:rastrigin}
 \centering
 \includegraphics[width=0.5\textwidth]{images/rastrigin_function.png}
@@ -153,7 +153,7 @@ Probleme im wirklichen Leben sind normalerweise eingeschränkt, multi-Objective 
 EA sind zwar als Teil des künstliche Intelligenzes (KI) betrachtet, aber genau wo sie in Verbindung mit anderen KI-Methoden stehen, und was die EA-Bereich beinhaltet, ist von dem Autor abhängig. Abbildung \ref{fig:metaheuristics} zeigt eine von mehrere mögliche Klassifikationen von KI-Methoden in Bezug auf Metaheuristics (welche über den Rahmen dieses Papiers hinausgehen).\\
 
 \begin{figure}[h]
-\caption{ Klassifikation von Metaheuristics. Quelle: \url{https://en.wikipedia.org/wiki/File:Metaheuristics_classification.svg}}
+\caption{Klassifikation von Metaheuristics. Quelle: \url{https://en.wikipedia.org/wiki/File:Metaheuristics_classification.svg}}
 \label{fig:metaheuristics}
 \centering
 \includegraphics[width=0.5\textwidth]{images/metaheuristics_classification.png}
@@ -225,7 +225,7 @@ Einige zufälligerweise-ausgewählt neue erstellt Elemente werden mutiert sein. 
 \end{enumerate}
 
 \begin{figure}[h]
-\caption{ Wesentlich genetic Algorithmen pseudo-Code. Quelle: \cite{wiley_evolutionary}}
+\caption{Wesentlich genetic Algorithmen pseudo-Code. Quelle: \cite{wiley_evolutionary}}
 \label{fig:ga_pseudo}
 \centering
 \includegraphics[width=0.5\textwidth]{images/ga_pseudo.png}
@@ -248,7 +248,7 @@ Die Grundideen hinter PSO sind wie folgendes:
 \end{itemize}
 
 \begin{figure}[h]
-\caption{ Wesentlich PSO Algorithmus pseudo-Code. Quelle: \cite{wiley_evolutionary}}
+\caption{Wesentlich PSO Algorithmus pseudo-Code. Quelle: \cite{wiley_evolutionary}}
 \label{fig:pso_pseudo}
 \centering
 \includegraphics[width=0.5\textwidth]{images/pso_pseudo.png}
@@ -259,7 +259,36 @@ Da die Partikeln die beste bisher erreichte Positionen ihrer Nachbarn kennen mü
 Die Tatsache, dass die beste bisher erreichte Positionen die Geschwindigkeit der Partikel beeinflussen, zeigt Rückmeldung. In welche Ausmaß wird die Partikel beeinflusst, kann entweder Erkundung oder Ausbeutung fördern.
 
 \subsection{Differential Evolution - DE}
-Todo
+Es wurde erstmals in \cite{storn_de_a} und \cite{storn_de_b} über Differential Evolution (DE) diskutiert. Aber die erste vielfach gelesene DE-Veröffentlichung war \cite{price_storn_de}.\par
+Im Gegensatz zu fast alle andere EA, DE ist nicht auf die Natur inspiriert. Eine die wichtigste Merkmale der DE ist, dass es einfach ist. Dies Merkmal ist wichtig, da es erlaubt Benutzer aus andere Bereiche (d. h. nicht Informatikern/inen oder Mathematiker/inen), es umzusetzen.\par
+Die wesentliche Schritte eines DE Algorithmus sind die Folgende:
+
+\begin{enumerate}
+\item Die Bevölkerung eines DE Algorithmus besteht auf Vektoren mit $n$ Elemente. Wo $n$ ist auch die Dimension des Problems. Weiterhin, jeder Vektor selbst stellt eine mögliche Lösung des Problems dar.
+\item Zwei Vektoren $x_{r2}, x_{r3} \mid r2 \neq r3$ werden ausgewählt.
+\item Die Differenz zwischen $x_{r2}$ und $x_{r3}$ wird berechnet.
+\item Die skalierte Differenz wird zu einem dritte Vektor $x_{r1} \mid r1 \notin \{ r2, r3 \}$ addiert. Das wird eine neue mögliche Lösung $v_i$ ergeben.
+\item $v_i$ wird mit einem Vektor $x_i \mid i \notin \{ r1, r2, r3 \}$ kombiniert.
+\item $x_i$ wird gegen $u_i$ vergleicht und der beste wird behaltet.
+\end{enumerate}
+
+Abbildung \ref{fig:de_beispiel} zeigt Schritte 2 bis 4 und Abbildung \ref{fig:de_pseudo} zeigt einen ganze DE Algorithmus pseudo-Code.
+
+\begin{figure}[h]
+\caption{Grundlegende Idee von DE. Quelle: \cite{wiley_evolutionary}}
+\label{fig:de_beispiel}
+\centering
+\includegraphics[width=0.5\textwidth]{images/de_beispiel.png}
+\end{figure}
+
+\begin{figure}[h]
+\caption{Wesentlich DE Algorithmus pseudo-Code. Quelle: \cite{wiley_evolutionary}}
+\label{fig:de_pseudo}
+\centering
+\includegraphics[width=0.5\textwidth]{images/de_pseudo.png}
+\end{figure}
+
+
 
 %------------------------------------------------
 
