@@ -269,10 +269,10 @@ Die wesentliche Schritte eines DE Algorithmus sind die Folgende:
 \item Die Differenz zwischen $x_{r2}$ und $x_{r3}$ wird berechnet.
 \item Die skalierte Differenz wird zu einem dritte Vektor $x_{r1} \mid r1 \notin \{ r2, r3 \}$ addiert. Das wird eine neue mögliche Lösung $v_i$ ergeben.
 \item $v_i$ wird mit einem Vektor $x_i \mid i \notin \{ r1, r2, r3 \}$ kombiniert.
-\item $x_i$ wird gegen $u_i$ vergleicht und der beste wird behaltet.
+\item $x_i$ wird gegen $u_i$ vergleicht und nur der beste wird behaltet.
 \end{enumerate}
 
-Abbildung \ref{fig:de_beispiel} zeigt Schritte 2 bis 4 und Abbildung \ref{fig:de_pseudo} zeigt einen ganze DE Algorithmus pseudo-Code.
+Abbildung \ref{fig:de_beispiel} zeigt Schritte 2 bis 4 und Abbildung \ref{fig:de_pseudo} zeigt einen ganze DE Algorithmus pseudo-Code.\par
 
 \begin{figure}[h]
 \caption{Grundlegende Idee von DE. Quelle: \cite{wiley_evolutionary}}
@@ -288,7 +288,11 @@ Abbildung \ref{fig:de_beispiel} zeigt Schritte 2 bis 4 und Abbildung \ref{fig:de
 \includegraphics[width=0.5\textwidth]{images/de_pseudo.png}
 \end{figure}
 
-
+Der Algorithmus, den die Abbildung \ref{fig:de_pseudo} beschreibt, ist \enquote{DE/rand/1/bin} genannt und es ist die einfachste Variante der DE Algorithmen. Andere Varianten sind z. B. \enquote{DE/best/1/L}, \enquote{DE/best/2/bin}, \enquote{DE/rand/1/exp},  u. v. a. m.\par
+Jedes Teil dieser Namen bezieht sich auf die Verfahren, die für bestimmte Schritte der DE Algorithmen verwendet werden.\par
+Zum Beispiel der \enquote{rand/best}-Teil\footnote{\enquote{best} und \enquote{rand} sind nicht die einzige Varianten.} beschreibt wie Vektoren $x_{r1}$ und $x_{r2}$ im 2. Schritt ausgewählt werden. \enquote{rand} bedeutet, dass die Vektoren zufälligerweise ausgewählt werden, während \enquote{best} heißt, dass die beste Vektoren eine höher Wahrscheinlichkeit haben, um ausgewählt zu sein.\par
+In \cite{love_u_mex} werden die Leistungen mehrerer Varianten von DE Algorithmen vergleicht.\par
+Wenn Vektoren $x_{r1}$ und $x_{r2}$ zufällig ausgewählt werden, gibt es ein Element der Zufälligkeit. Wenn nur die beste Vektoren ausgewählt werden, wird Ausbeutung gefördert. Die Tatsache, dass nur die beste Vektor im 6. Schritt behaltet wird, zeigt Rückmeldung. Die Kombination, die im 5. Schritt stattfinde, könnte auch als Rückmeldung und Ausbeutung beurteilt sein.
 
 %------------------------------------------------
 
