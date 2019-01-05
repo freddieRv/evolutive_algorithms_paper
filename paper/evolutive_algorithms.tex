@@ -76,7 +76,7 @@
 \pretitle{\begin{center}\Huge\bfseries} % Article title formatting
 \posttitle{\end{center}} % Article title closing formatting
 \title{Evolutionäre Optimierungsalgorithmen} % Article title
-\author{
+\author {
 	\textsc{Federico Ramírez Villagrana} \\[1ex]
 	\normalsize Universität Hamburg \\
 	\normalsize Methodenkompetenz - Einführung in das wissenschaftliche Arbeiten \\
@@ -104,7 +104,7 @@
 
 \lettrine[nindent=0em,lines=3]{D} as Problem des Handlungsreisenden (engl. traveling salesman problem oder TSP) ist ein sehr bekanntes und studierte Problem in dem Informatik-Bereich und es geht wie folgendes:\par
 Es muss eine Reihenfolge für den Besuch mehrerer Orte so gewählt sein, dass keine Station außer der ersten mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz, und die erste Station gleich der letzten Station ist. \cite{wiki_tsp}\par
-Sei $n$ die Anzahl der Stationen, es gibt $(n-1)!$ mögliche Lösungen für das TSP. Das heißt, dass für $n=4$ es gibt $6$ mögliche Lösungen. Es ist nicht schwer einen brute-force Ansatz zu verfolgen für ein Problem, das nur 6 Lösungen hat. Aber wenn $n=50$ es gibt circa $6,1\e{62}$ Lösungen.\par
+Sei $n$ die Anzahl der Stationen, es gibt $(n-1)!$ mögliche Lösungen für das TSP. Das heißt, dass für $n=4$ es gibt $6$ mögliche Lösungen. Es ist nicht schwer einen brute-force \footnote{Auch Exhaustionsmethode, ist eine Lösungsmethode für Probleme, die auf dem Ausprobieren aller möglichen (oder zumindest vieler möglicher) Fälle beruht. \cite{wiki_brute_force}} Ansatz zu verfolgen für ein Problem, das nur 6 Lösungen hat. Aber wenn $n=50$ es gibt circa $6,1\e{62}$ Lösungen.\par
 Folgendes ist hilfreich, um diese Anzahl in eine Perspektive zu setzen: Das Universum ist circa 15 Milliarde Jahre alt, das ist $4,7\e{17}$ Sekunden. Wenn es eine Billion Rechner gäbe, die jeder einzeln seit dem Anfang des Universums eine Billion Lösungen pro Sekunde berechnete, bisher wären nur $4,7\e{41}$ Lösungen berechnet worden.\par
 Das TSP ist nur ein Beispiel von vielfältigen Probleme, die zu den kombinatorischen Problemen gehören, das heißt, Probleme für die einfach keine brute-force Ansatz möglich ist. Es ist in diesem Fall, dass evolutionärer Algorithmen (EA) hilfreich sind.\par
 EA sind eine gute Werkzeug um gute Lösungen zu finden. Natürlich können wir nicht sicher sein, dass wir das beste Lösung gefunden haben, außer wenn wir jeder mögliche Lösungen berechnen haben. Aber wie es mit dem TSP-Beispiel gezeigt ist, es ist nicht immer möglich, alle mögliche Lösungen zu finden.
@@ -113,8 +113,7 @@ EA sind eine gute Werkzeug um gute Lösungen zu finden. Natürlich können wir n
 
 \section{Stand der Forschung}
 
-\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
-\blindtext % Dummy text
+Todo
 
 %------------------------------------------------
 
@@ -237,24 +236,42 @@ In Teil 2 sowie in Teile 4 bis 6 kann Zufälligkeit verwendet werden, je nachdem
 In der Mutation-Teil, eine hoch Wahrscheinlichkeit um Elemente zu mutieren heißt viel Erkundung und weniger Ausbeutung und umgekehrt.
 
 \subsection{Particle Swarm Optimization - PSO}
-Particle Swarm Optimization (PSO) Algorithmus wird ursprünglich in \cite{kennedy_pso} und in \cite{shi_pso} präsentiert.
+Particle Swarm Optimization (PSO) Algorithmus ist ursprünglich in \cite{kennedy_pso} und in \cite{shi_pso} präsentiert.\par
+PSO ist auf menschliches soziales Verhalten basiert. \cite{eberhart_pso} Genauer,  PSO basiert auf der Beobachtung von Gruppen von Individuen, die zusammenarbeiten, um nicht nur ihr kollektives Verhalten in einer bestimmten Aufgabe zu verbessern, sondern auch ihr individuelles Verhalten zu verbessern.\par
+Die Grundideen hinter PSO sind wie folgendes:
+
+\begin{itemize}
+\item Es gibt eine Menge Partikeln, die sich mit einer beliebigen Geschwindigkeit durch den Suchraum bewegen.
+\item Der Suchraum ist in \enquote{Nachbarschaften} mit einer beliebigen gleichen Größe unterteilt.
+\item Jeder Partikeln speichert sowohl die beste Position, die sie im Suchraum besucht hat, als auch die beste Position, die ihre Nachbarn erreicht haben.
+\item Beide die Partikels beste Position und ihre Nachbarns beste Positionen beeinflussen die Partikels Geschwindigkeit.
+\end{itemize}
+
+\begin{figure}[h]
+\caption{ Wesentlich PSO Algorithmus pseudo-Code. Quelle: \cite{wiley_evolutionary}}
+\label{fig:pso_pseudo}
+\centering
+\includegraphics[width=0.5\textwidth]{images/pso_pseudo.png}
+\end{figure}
+
+In PSO können die Geschwindigkeiten der ersten Bevölkerung zufällig initialisiert werden. Daher haben wir ein Element der Zufälligkeit.\par
+Da die Partikeln die beste bisher erreichte Positionen ihrer Nachbarn kennen müssen, gibt es auch Kommunikation.\par
+Die Tatsache, dass die beste bisher erreichte Positionen die Geschwindigkeit der Partikel beeinflussen, zeigt Rückmeldung. In welche Ausmaß wird die Partikel beeinflusst, kann entweder Erkundung oder Ausbeutung fördern.
 
 \subsection{Differential Evolution - DE}
-\blindtext % Dummy text
+Todo
 
 %------------------------------------------------
 
 \section{Diskussion}
 
-\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
-\blindtext % Dummy text
+Todo
 
 %------------------------------------------------
 
 \section{Fazit}
 
-\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
-\blindtext % Dummy text
+Todo
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST

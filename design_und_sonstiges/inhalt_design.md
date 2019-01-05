@@ -38,6 +38,7 @@
     + Real life areas (like medicine, building motors or planes, etc. El cap 2 de la Dra. Alma tiene genau das! Folien 6 - 14)
 - Like any other IA technique, EA work better combined in a hybrid system
 - Als Nachteil: the tunning of params could present a hard problem itself.
+    + Mention the params of any of the EAs shown as example.
 
 ## Zusammenfasung
 - There's practically no limit to where they can be used.
