@@ -36,11 +36,10 @@
 - What are they good for and what are they not good for
     + Hay un quote interesante sobre esto casi al final de una de las diapositivas de la Dr. Alma
     + Real life areas (like medicine, building motors or planes, etc. El cap 2 de la Dra. Alma tiene genau das! Folien 6 - 14)
-- Like any other IA technique, EA work better combined in a hybrid system
 - EA can also be used to optimize parts of a system.
 - Als Nachteil: the tunning of params could present a hard problem itself.
     + Mention the params of any of the EAs shown as example.
-- Noch eine Nachteil: It can be quite complicated to defien an appropiate/usefull objective function.
+- Noch eine Nachteil: It can be quite complicated to define an appropiate/usefull objective function.
 
 ## Zusammenfasung
 - There's practically no limit to where they can be used.
