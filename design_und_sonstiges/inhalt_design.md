@@ -47,3 +47,4 @@
 - Thanks to the computational power available today, we can solve more and more complicated problems.
 - We have to keep looking at the nature for inspiration.
     + Nature has proven itself once again as the best muse.
+        * "Sowohl in der Wissenschaft, als auch in der Kunst, hat sich die Natur als die beste Muse erwiesen.
