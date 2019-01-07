@@ -33,6 +33,8 @@
     + DE
 
 ## Diskussion - Vor- und Nachteile
+- There's practically no limit to where they can be used.
+- Mention the list of applications from wikipedia
 - What are they good for and what are they not good for
     + Hay un quote interesante sobre esto casi al final de una de las diapositivas de la Dr. Alma
     + Real life areas (like medicine, building motors or planes, etc. El cap 2 de la Dra. Alma tiene genau das! Folien 6 - 14)
@@ -42,8 +44,8 @@
 - Noch eine Nachteil: It can be quite complicated to define an appropiate/usefull objective function.
 
 ## Zusammenfasung
-- There's practically no limit to where they can be used.
 - Thanks to the computational power available today, we can solve more and more complicated problems.
+    + But it also poses more and more complicated ones.
 - We have to keep looking at the nature for inspiration.
-    + Nature has proven itself once again as the best muse.
-        * "Sowohl in der Wissenschaft, als auch in der Kunst, hat sich die Natur als die beste Muse erwiesen.
+    + "Sowohl in der Wissenschaft, als auch in der Kunst, hat sich die Natur als die beste Muse erwiesen.
+- The future of IA is to star applying the already known methods in new areas and proccesses, as well as developing new ones.
