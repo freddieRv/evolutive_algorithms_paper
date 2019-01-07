@@ -231,9 +231,9 @@ Einige zufälligerweise-ausgewählte neu-erstellte Elemente werden mutiert sein.
 \includegraphics[width=0.5\textwidth]{images/ga_pseudo.png}
 \end{figure}
 
-EA insgesamt sind Problem-unabhängig, das heißt, dass wenn es eine geeignete Darstellung der Lösungen und eine geeignete Zielfunktion gibt, kann theoretisch jedes Problem mittels EA optimiert werden. Aus diesem Grund gibt es bei jeden EA ein Element der Adaptation.\par
-In Teil 2 sowie in Teile 4 bis 6 kann Zufälligkeit verwendet werden, je nachdem welche Verfahren bzw. ausgewählt werden.\par
-In dem Mutation-Teil, eine hoch Wahrscheinlichkeit, um Elemente zu mutieren, heißt viel Erkundung und weniger Ausbeutung, und umgekehrt.
+EA insgesamt sind Problem-unabhängig, das heißt, dass wenn es eine geeignete Darstellung der Lösungen und eine geeignete Zielfunktion gibt, kann theoretisch jedes Problem mittels EA optimiert werden. Aus diesem Grund gibt es bei jeden EA ein Element der \textbf{Adaptation}.\par
+In Teil 2 sowie in Teile 4 bis 6 kann \textbf{Zufälligkeit} verwendet werden, je nachdem welche Verfahren bzw. ausgewählt werden.\par
+In dem Mutation-Teil, eine hoch Wahrscheinlichkeit, um Elemente zu mutieren, heißt viel \textbf{Erkundung} und weniger \textbf{Ausbeutung}, und umgekehrt.
 
 \subsection{Particle Swarm Optimization - PSO}
 Particle Swarm Optimization (PSO) ist ursprünglich in \cite{kennedy_pso} und in \cite{shi_pso} präsentiert.\par
@@ -254,9 +254,9 @@ Die Grundideen hinter PSO sind folgende:
 \includegraphics[width=0.5\textwidth]{images/pso_pseudo.png}
 \end{figure}
 
-In PSO können die Geschwindigkeiten der ersten Bevölkerung zufällig initialisiert werden. Daher haben wir ein Element der Zufälligkeit.\par
+In PSO können die Geschwindigkeiten der ersten Bevölkerung zufällig initialisiert werden. Daher haben wir ein Element der \textbf{Zufälligkeit}.\par
 Da die Partikeln die beste bisher erreichte Positionen ihrer Nachbarn kennen müssen, gibt es auch Kommunikation.\par
-Die Tatsache, dass die beste bisher erreichte Positionen die Geschwindigkeit der Partikel beeinflussen, zeigt Rückmeldung. In welche Ausmaß wird die Partikel beeinflusst, kann entweder Erkundung oder Ausbeutung fördern.
+Die Tatsache, dass die beste bisher erreichte Positionen die Geschwindigkeit der Partikel beeinflussen, zeigt \textbf{Rückmeldung}. In welche Ausmaß wird die Partikel beeinflusst, kann entweder \textbf{Erkundung} oder \textbf{Ausbeutung} fördern.
 
 \subsection{Differential Evolution - DE}
 Es wurde erstmals in \cite{storn_de_a} und \cite{storn_de_b} über differential Evolution (DE) diskutiert. Aber die erste vielfach gelesene DE-Veröffentlichung war \cite{price_storn_de}.\par
@@ -292,7 +292,7 @@ Der Algorithmus, den die Abbildung \ref{fig:de_pseudo} beschreibt, ist \enquote{
 Jedes Teil dieser Namen bezieht sich auf die Verfahren, die für bestimmte Schritte der DE Algorithmen verwendet werden.\par
 Zum Beispiel der \enquote{rand/best}-Teil\footnote{\enquote{best} und \enquote{rand} sind nicht die einzige Varianten.} beschreibt wie Vektoren $x_{r1}$ und $x_{r2}$ im 2. Schritt ausgewählt werden. \enquote{rand} bedeutet, dass die Vektoren zufälligerweise ausgewählt werden, während \enquote{best} heißt, dass die beste Vektoren eine höher Wahrscheinlichkeit haben, um ausgewählt zu sein.\par
 In \cite{love_u_mex} werden die Leistungen mehrerer Varianten von DE Algorithmen vergleicht.\par
-Wenn Vektoren $x_{r1}$ und $x_{r2}$ zufällig ausgewählt werden, gibt es ein Element der Zufälligkeit. Wenn nur die beste Vektoren ausgewählt werden, wird Ausbeutung gefördert. Die Tatsache, dass nur die beste Vektor im 6. Schritt behaltet wird, zeigt Rückmeldung. Die Kombination, die im 5. Schritt stattfindet, könnte auch entweder Erkundung oder Ausbeutung fördern.
+Wenn Vektoren $x_{r1}$ und $x_{r2}$ zufällig ausgewählt werden, gibt es ein Element der \textbf{Zufälligkeit}. Wenn nur die beste Vektoren ausgewählt werden, wird \textbf{Ausbeutung} gefördert. Die Tatsache, dass nur die beste Vektor im 6. Schritt behaltet wird, zeigt \textbf{Rückmeldung}. Die Kombination, die im 5. Schritt stattfindet, könnte auch entweder \textbf{Erkundung} oder \textbf{Ausbeutung} fördern.
 
 %------------------------------------------------
 
