@@ -85,7 +85,7 @@
 \date{} % Leave empty to omit a date
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
-\noindent In diesem Paper wird darüber diskutiert, sowohl was Optimierung ist und warum ist es schwer, als auch was evolutionärer Algorithmen (EA) sind und wie, warum,  und wann sind sie hilfreich in dem Optimierung-Bereich. Es wird auch im Detail erklärt, wie EA funktionieren und warum sind sie als teil des künstlichen Intelligenz betrachtet. Es werden auch einige bekannte EA erwähnt und oberflächlich erklärt. Am ende wird darüber diskutiert, was für Vor- und Nachteile die EA haben.
+\noindent In diesem Paper wird darüber diskutiert, sowohl was Optimierung ist und warum ist es schwer, als auch was evolutionäre Algorithmen (EA) sind und wie, warum,  und wann sind sie hilfreich im Optimierung-Bereich. Es wird auch im Detail erklärt, wie EA funktionieren und warum sind sie als teil der künstlichen Intelligenz betrachtet. Es werden auch einige bekannte EA erwähnt und oberflächlich erklärt. Am ende wird darüber diskutiert, welche     Vor- und Nachteile die EA haben.
 \end{abstract}
 }
 
@@ -102,12 +102,12 @@
 
 \section{Einleitung}
 
-\lettrine[nindent=0em,lines=3]{D} as Problem des Handlungsreisenden (engl. traveling salesman problem oder TSP) ist ein sehr bekanntes und studiertes Problem in dem Informatik-Bereich und es geht wie folgendes:\par
-Es muss eine Reihenfolge für den Besuch mehrerer Orte so gewählt sein, dass keine Station außer der ersten mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz, und die erste Station gleich der letzten Station ist. \cite{wiki_tsp}\par
-Sei $n$ die Anzahl der Stationen, es gibt $(n-1)!$ mögliche Lösungen für das TSP. Das heißt, dass für $n=4$ es $6$ mögliche Lösungen gibt. Es ist nicht schwer einen brute-force \footnote{Auch Exhaustionsmethode, ist eine Lösungsmethode für Probleme, die auf dem Ausprobieren aller möglichen (oder zumindest vieler möglicher) Fälle beruht. \cite{wiki_brute_force}} Ansatz zu verfolgen für ein Problem, das nur 6 Lösungen hat. Aber wenn $n=50$, gibt es circa $6,1\e{62}$ Lösungen.\par
+\lettrine[nindent=0em,lines=3]{D} as Problem des Handlungsreisenden (engl. traveling salesman problem oder TSP) ist ein sehr bekanntes und studiertes Problem im Informatik-Bereich. Es geht wie folgendes:\par
+Eine Reihenfolge für den Besuch mehrerer Orte muss so gewählt sein, dass keine Station außer der ersten mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz, und die erste Station gleich der letzten Station ist. \cite{wiki_tsp}\par
+Sei $n$ die Anzahl der Stationen, dann es $(n-1)!$ mögliche Lösungen für das TSP gibt. Daher wenn $n=4$, dann es $6$ mögliche Lösungen gibt. Es ist nicht schwer, einen brute-force \footnote{Auch Exhaustionsmethode, ist eine Lösungsmethode für Probleme, die auf dem Ausprobieren aller möglichen (oder zumindest vieler möglicher) Fälle beruht. \cite{wiki_brute_force}} Ansatz zu verfolgen, für ein Problem, das nur 6 Lösungen hat. Aber wenn $n=50$, dann es circa $6,1\e{62}$ Lösungen gibt.\par
 Folgendes ist hilfreich, um diese Anzahl in einer Perspektive zu setzen: Das Universum ist circa 15 Milliarde Jahre alt, das ist $4,7\e{17}$ Sekunden. Wenn es eine Billion Rechner gäbe, die jede einzeln seit dem Anfang des Universums eine Billion Lösungen pro Sekunde berechnete, bisher wären nur $4,7\e{41}$ Lösungen berechnet worden.\par
-Das TSP ist nur ein Beispiel von vielfältigen Probleme, die zu den kombinatorischen Problemen gehören, das heißt, Probleme für die einfach kein brute-force Ansatz möglich ist. Es ist in diesem Fall, dass evolutionärer Algorithmen (EA) hilfreich sind.\par
-EA sind ein geeignetes Werkzeug, um gute Lösungen für kombinatorische Probleme zu finden. Natürlich können wir nicht sicher sein, dass wir die beste Lösung gefunden haben, außer wenn wir jede mögliche Lösung berechnen haben. Aber wie es mit dem TSP-Beispiel gezeigt ist, es ist nicht immer möglich, alle mögliche Lösungen (in angemessener Zeit) zu berechnen.
+Das TSP ist nur ein Beispiel von vielfältigen Problemen, die zu den kombinatorischen Problemen gehören, das heißt, Probleme, für die kein brute-force Ansatz möglich ist. In diesem Fall sind evolutionärer Algorithmen (EA) ein gutes Werkzeug, um gute Lösungen zu finden.\par
+Natürlich können wir nicht sicher sein, dass wir die beste Lösung gefunden haben, außer wenn wir jede mögliche Lösung berechnet haben. Aber wie mit dem TSP-Beispiel gezeigt worden, ist es jedoch nicht immer möglich, alle mögliche Lösungen (in angemessener Zeit) zu berechnen.
 
 %------------------------------------------------
 
@@ -120,19 +120,19 @@ Heutzutage finden sich immer mehr Anwendungen der EA in nahezu allen Bereichen. 
 
 \section{Optimierung}
 
-\lettrine[nindent=0em,lines=3]{I} n dem Mathematik-Bereich, Optimierung bedeutet die Findung von Parametern eines Systems, die ein bestmögliches Ergebnis erzielen. \cite{wiki_optimierung} Wir können diese Findung von Parametern auch wie folgendes definieren: Die Auswahl der bestmöglichen Lösung eines Problems von einer Menge mögliche Lösungen.\par
-In Optimierungsprobleme wird eine Zielfunktion (engl. objective function) definiert, die entweder maximiert oder minimiert werden soll. Die Zielfunktion wird \enquote{Kosten-Funktion} oder \enquote{Fitness-Funktion} in Minimierung- und Maximierungsprobleme bzw. genannt.\par
-Sei $f(x)$ ein Zielfunktion, $x$ ist ein Vektor und wird \enquote{Entscheidungsvariable} genannt. Die Anzahl von Elementen in $x$ wird die \enquote{Dimension} des Problems genannt.
+\lettrine[nindent=0em,lines=3]{I} m Mathematik-Bereich bedeutet Optimierung, die Findung von Parametern eines Systems, die ein bestmögliches Ergebnis erzielen. \cite{wiki_optimierung} Wir können diese Findung von Parametern auch wie folgendes definieren: Die Auswahl der bestmöglichen Lösung eines Problems von einer Menge möglicher Lösungen.\par
+In Optimierungsprobleme wird eine Zielfunktion (engl. objective function) definiert, die entweder maximiert oder minimiert werden soll. Die Zielfunktion wird \enquote{Kosten-Funktion} oder \enquote{Fitness-Funktion} in Minimierung- und Maximierungsprobleme beziehungsweise genannt.\par
+Sei $f(x)$ eine Zielfunktion, dann $x$ ein Vektor ist, der \enquote{Entscheidungsvariable} genannt wird. Die Anzahl von Elementen in $x$ wird die \enquote{Dimension} des Problems genannt.
 Die Domäne der Zielfunktion repräsentiert die mögliche Lösungen des Problems. \par
-Das Ziel der Optimierung ist es denn, die bestmögliche Lösung des Problems zu finden, das heißt, einen Wert für die Entscheidungsvariable zu finden, sodass die Zielfunktion einen maximal bzw. minimal Wert ergibt.\par
+Das Ziel der Optimierung ist es denn, die bestmögliche Lösung des Problems zu finden, das heißt, einen Wert für die Entscheidungsvariable zu finden, sodass die Zielfunktion einen Maximal- beziehungsweise Minimalwert ergibt.\par
 Es gibt verschiedene Klassifizierungen oder Arten von Optimierung:
 
 \begin{itemize}
-\item{Eingeschränkt Optimierung.}\\
+\item{Eingeschränkte Optimierung.}\\
 Die Entscheidungsvariable kann nicht irgendwelchen Wert aus der Domäne der Zielfunktion nehmen. Es gibt Einschränkungen dafür.\\
 \item{Multi-objective Optimierung.}\\
 Das Problem besteht aus vielfältigen, voneinander unabhängigen Zielfunktionen.\\
-\item{Multi-modal Optimierung.}\\
+\item{Multi-modale Optimierung.}\\
 Die Zielfunktion(en) hat/haben mehrere Minima bzw. Maxima. Abbildung \ref{fig:rastrigin} zeigt eine multi-modale Funktion.
 \end{itemize}
 
@@ -143,15 +143,15 @@ Die Zielfunktion(en) hat/haben mehrere Minima bzw. Maxima. Abbildung \ref{fig:ra
 \includegraphics[width=0.5\textwidth]{images/rastrigin_function.png}
 \end{figure}
 
-Eine der wichtigsten und schwersten Teile der Optimierung ist es, eine geeignete Zielfunktion zu definieren, die alle die wichtige zu optimieren Faktoren berücksichtigt.
-Probleme im wirklichen Leben sind normalerweise eingeschränkt, multi-Objective und multi-modale, oder mit einer hoch Anzahl von Dimensionen. Wegen diesen Eigenschaften der Zielfunktionen und der Optimierungsprobleme ist es schwer eine gute Lösung mittels traditioneller Vorgänge zu finden. Im Laufe der Zeit haben EA sich als gutes Werkzeug zur Lösung dieser Art von Probleme in angemessener Zeit erwiesen.
+Eine der wichtigsten und schwierigsten Teile der Optimierung ist es, eine geeignete Zielfunktion zu definieren, die die wichtige zu optimierenden Faktoren berücksichtigt.
+Probleme im wirklichen Leben sind normalerweise eingeschränkt, multi-Objectiv und multi-modal, oder mit einer großen Anzahl von Dimensionen. Wegen dieser Eigenschaften der Zielfunktionen und der Optimierungsprobleme ist es schwierig, eine gute Lösung mittels traditioneller Vorgänge zu finden. Im Laufe der Zeit haben EA sich als gutes Werkzeug zur Lösung dieser Art von Probleme in angemessener Zeit erwiesen.
 
 %------------------------------------------------
 
 \section{Was ist ein evolutionärer Algorithmus?}
 
-\lettrine[nindent=0em,lines=3]{D} er EA-Bereich ist ziemlich neu, deswegen gibt es bisher keine allgemein akzeptierte Definition von evolutionäre Algorithmus.\par
-EA sind zwar als Teil des künstliche Intelligenzes (KI) betrachtet, aber genau wo sie in Verbindung mit anderen KI-Methoden stehen, und was der EA-Bereich beinhaltet, ist von dem Autor abhängig. Abbildung \ref{fig:metaheuristics} zeigt eine von mehrere mögliche Klassifikationen von KI-Methoden in Bezug auf Metaheuristics (welche über den Rahmen dieses Papiers hinausgehen).
+\lettrine[nindent=0em,lines=3]{D} er EA-Bereich ist ziemlich neu, deswegen gibt es bisher keine allgemein akzeptierte Definition von evolutionären Algorithmus.\par
+EA sind zwar als Teil der künstliche Intelligenzes (KI) betrachtet, aber genau wo sie in Verbindung mit anderen KI-Methoden stehen, und was der EA-Bereich beinhaltet, ist von dem Autor abhängig. Abbildung \ref{fig:metaheuristics} zeigt eine von mehreren möglichen Klassifikationen von KI-Methoden in Bezug auf Metaheuristics (welche über den Rahmen dieses Papiers hinausgehen).
 
 \begin{figure}[h]
 \caption{Klassifikation von Metaheuristics. Quelle: \url{https://en.wikipedia.org/wiki/File:Metaheuristics_classification.svg}}
@@ -160,42 +160,42 @@ EA sind zwar als Teil des künstliche Intelligenzes (KI) betrachtet, aber genau 
 \includegraphics[width=0.5\textwidth]{images/metaheuristics_classification.png}
 \end{figure}
 
-In Abbildung \ref{fig:metaheuristics} kann es auch erkannt werden, dass der Autor Particle Swarm Optimization (PSO) und Ant Colony Optimization (ACO) nicht als EA betrachtet, trotzdem gibt es andere Autoren (wie z. B. \cite{wiley_evolutionary}), die diese Algorithmen genau für EA halten.\par
+In Abbildung \ref{fig:metaheuristics} kann auch erkannt werden, dass der Autor Particle Swarm Optimization (PSO) und Ant Colony Optimization (ACO) nicht als EA betrachtet. Trotzdem gibt es andere Autoren (wie z. B. \cite{wiley_evolutionary}), die diese Algorithmen genau für EA halten.\par
 
-In diesem Paper wird folgende Definition für evolutionärer Algorithmus genommen: Ein Algorithmus, der die Lösung eines Problems durch viele Iterationen entwickelt    .
+In diesem Paper wird folgende Definition für evolutionäre Algorithmus genommen: Ein Algorithmus, der die Lösung eines Problems durch viele Iterationen entwickelt    .
 
 \subsection{Eigenschaften der evolutionären Algorithmen}
 Folgende sind die Hauptmerkmale der EA:
 
 \begin{itemize}
-\item{Eine Zielfunktion.}\\
-\item{Eine - so genannte - Bevölkerung von mögliche Lösungen.}\\
-Eine Menge von Darstellungen der Lösungen (Elemente der Domäne der Zielfunktion) des Problems, die mittels der Algorithmus und mehrere Iterationen (auch \enquote{Generationen} genannt) verarbeitet und hoffentlich verbessert werden.\\
+\item{Sie müssen eine Zielfunktion haben.}\\
+\item{Eine - sogenannte - Bevölkerung von mögliche Lösungen.}\\
+Eine Menge von Darstellungen der Lösungen (Elemente der Domäne der Zielfunktion) des Problems, die mittels des Algorithmus und mehreren Iterationen (auch \enquote{Generationen} genannt) verarbeitet und hoffentlich verbessert werden.\\
 \item{Vorgänge, die die Elementen der Bevölkerung betreffen und verändern.}
 \end{itemize}
 
 Die meisten EA sind aus der Natur inspiriert, das heißt, dass Wissenschaftler Ereignisse, Systeme, und Mechanismen der Natur beobachten und danach versuchen einigermaßen, sie mit Algorithmen zu reproduzieren. EA werden \enquote{evolutionär} genannt, denn sie sind ursprünglich auf die Evolution basiert. \cite{holland_ga}
 
 \subsection{Eigenschaften der Intelligenz}
-Wie vorher gesagt, EA sind als Teil des KI betrachtet, weil sie Eigenschaften intelligenter natürlicher Systeme emulieren.\par
-Nach \cite{wiley_evolutionary} sind die folgende Eigenschaften notwendig, um ein System als intelligent zu betrachten:
+Wie vorher gesagt, EA sind als Teil der KI betrachtet, weil sie Eigenschaften intelligenter natürlicher Systeme emulieren.\par
+Laut \cite{wiley_evolutionary} sind die folgenden Eigenschaften notwendig, um ein System als intelligent zu betrachten:
 
 \begin{itemize}
 \item{Adaptation.}\\
 Ein intelligentes System muss in hohem Maße an unvorhersehbare Änderungen anpassbar sein. Lernen ist daher unerlässlich.\\
 \item{Zufälligkeit.}\\
-Obwohl Zufälligkeit meistens als eine schlechte Eigenschaft betrachtet wird, es ist in gewissem Maße notwendig, damit neue Lösungen eines Problems gefunden sein können.\\
+Obwohl Zufälligkeit meistens als eine schlechte Eigenschaft betrachtet wird, ist es in gewissem Maße notwendig, damit neue Lösungen eines Problems gefunden werden können.\\
 \item{Kommunikation.}\\
-Zwar ist eine einzige Ameise nicht wirklich als intelligent beurteilt, aber eine Ameisenkolonie ist (dank Kommunikation durch Pheromone) als eine super-intelligent Einheit überlegt.\\
+Zwar wird eine einzige Ameise nicht wirklich als intelligent beurteilt, aber eine Ameisenkolonie wird (dank Kommunikation durch Pheromone) als eine super-intelligente Einheit überlegt.\\
 \item{Rückmeldung.}\\
 Ein System kann sich nicht anpassen und verbessern, wenn es seine Umgebung nicht erkennen und darauf reagieren kann. Auch um zu lernen, muss ein System seine Fehler (mittels Rückmeldung) erkennen.\\
 \item{Erkundung.}\\
-Neue Lösungen finden, neue Wege erkunden, neue Ideen erzeugen. Am meistens eng mit Zufälligkeit verbindet.\\
+Das heißt, neue Lösungen finden, neue Wege erkunden, neue Ideen erzeugen. Normalerweise ist Erkundung eng mit Zufälligkeit verbindet.\\
 \item{Ausbeutung.}\\
-Im Gegenteil zu Erkundung, Ausbeutung heißt, schon bekannte Lösungen und Wege (oder Kenntnisse) ausnutzen.
+Der Gegenteil von Erkundung. Das heißt, schon bekannte Lösungen und Wege (oder Kenntnisse) ausnutzen.
 \end{itemize}
 
-In nächster Sektion werden verschiedene Beispiele von EA gezeigt und in jeden Beispiel wird es erwähnt, welches Teil des Algorithmuses welche Eigenschaft des Intelligenzes versucht zu emulieren. Es ist auch wichtig zu nennen, dass nicht jede Eigenschaft des Intelligenzes von jeden EA repliziert ist.
+In nächster Sektion werden verschiedene Beispiele von EA gezeigt und in jedem Beispiel wird erwähnt, welches Teil des Algorithmus welche Eigenschaft der Intelligenz versucht zu emulieren. Es ist auch wichtig zu nennen, dass nicht jede Eigenschaft des Intelligenzes von jeden EA repliziert ist.
 
 %------------------------------------------------
 
@@ -203,25 +203,25 @@ In nächster Sektion werden verschiedene Beispiele von EA gezeigt und in jeden B
 
 Heutzutage gibt es viele EA und jedes Jahr werden neue entwickelt. In dieser Sektion werden nur ein paar der bekanntesten und wichtigsten erwähnt und oberflächlich erklärt.
 
-\subsection{Genetic Algorithmen - GA}
-Genetic Algotihmen (GA) sind ursprünglich in \cite{holland_ga} präsentiert und danach in \cite{goldberg_ga} weiter entwickelt. Der Name \enquote{Genetic Algorithms} bezieht sich mehr auf eine Familie von Algorithmen als auf einen einzigen Algorithmus.\par
-GA sind die erste vorgestellte, bekannteste, und am meistens verwendete EA. Ursprünglich waren sie dafür entwickelt, um adaptierbare Systeme zu studieren. Sie sind Simulationen der natürlichen Selektion. Daher sind sie genau auf die Evolution basiert.\par
+\subsection{Genetische Algorithmen}
+Genetische Algorithmen (engl. genetic algorithms oder GA) sind ursprünglich in \cite{holland_ga} präsentiert und danach in \cite{goldberg_ga} weiterentwickelt. Der Name \enquote{Genetic Algorithms} bezieht sich mehr auf eine Familie von Algorithmen als auf einen einzigen Algorithmus.\par
+GA sind die erste vorgestellten, bekanntesten, und am meisten verwendeten EA. Ursprünglich waren sie dafür entwickelt, um adaptierbare Systeme zu studieren. Sie sind Simulationen der natürlichen Selektion. Daher sind sie genau auf die Evolution basiert.\par
 Es gibt sechs Hauptteile der GA:
 
 \begin{enumerate}
 \item{Codierung der Lösungen.}\par
-Als erstes muss man eine geeignete Codierung für die mögliche Lösungen finden. Das heißt, eine Darstellung für die Lösungen finden, die einfach zu verarbeiten ist. Eine die am meistens verwendete Codierungen ist eine Bit-Folge. In dieser Codierung jedes Bit wird \enquote{Gen} genannt.
+Als erstes muss man eine geeignete Codierung für die möglichen Lösungen finden. Das heißt, eine Darstellung für die Lösungen finden, die einfach zu verarbeiten ist. Eine die am meisten verwendeten Codierungen ist eine Bit-Folge. In dieser Codierung jedes Bit wird \enquote{Gen} genannt.
 \item{Ursprüngliche Bevölkerung.}\par
-Eine ursprüngliche Bevölkerung muss initialisiert werden. Diese Initialisierung kann entweder zufällig oder auf Vorkenntnis basiert sein. Wie viele Elementen die Bevölkerung hat, ist ein wichtiger Parameter. Je mehrere Elemente desto eine bessere Wahrscheinlichkeit, um gute Lösungen zu finden.
+Eine ursprüngliche Bevölkerung muss initialisiert werden. Diese Initialisierung kann entweder zufällig oder auf Vorkenntnis basiert sein. Wie viele Elemente die Bevölkerung hat, ist ein wichtiger Parameter. Je mehr Elemente es gibt desto höher die Wahrscheinlichkeit, um gute Lösungen zu finden.
 \item{Fitnessfunktion.}\par
 Die Zielfunktion des Problems.\par
 Der Wert, den die Zielfunktion ergibt, wenn sie für den Wert ausgewertet wird, den ein Element der Bevölkerung darstellt, wird die \enquote{Fitness} des Elements genannt.
 \item{Auswahl von Einzelnen.}\par
-Zwei Elemente der Bevölkerung werden ausgewählt, um ein neue Element herzustellen. Das verfolgte Verfahren, um die Elemente auszuwählen, kann entweder zufällig sein, oder auf die Fitness der Elemente basiert. Die ausgewählte Elemente werden \enquote{Eltern} genannt.
+Zwei Elemente der Bevölkerung werden ausgewählt, um ein neues Element herzustellen. Das verfolgte Verfahren, um die Elemente auszuwählen, kann entweder zufällig sein, oder auf die Fitness der Elemente basiert. Die ausgewählten Elemente werden \enquote{Eltern} genannt.
 \item{Crossover.}\par
-Dies ist das wichtigste Teil der GA. Es definiert wie das neue Element aus die Eltern erstellt wird. Das heißt, welche Gene wird das neue Element von jeden Elternteil erben.
+Dies ist der wichtigste Teil der GA. Es definiert wie das neue Element aus die Eltern erstellt wird. Das heißt, welche Gene wird das neue Element von jeden Elternteil erben.
 \item{Mutation.}\par
-Einige zufälligerweise-ausgewählte neu-erstellte Elemente werden mutiert sein. Das heißt, dass einige Bits gekippt werden. Welche Elemente werden mutiert und wie viele und welche Bits werden gekippt, kann mittels verschiedener Verfahren bzw. entscheidet werden.
+Einige zufälligerweise-ausgewählte neu-erstellte Elemente werden mutiert sein. Das heißt, dass einige Bits gekippt werden. Welche Elemente mutiert werden und wie viele und welche Bits gekippt werden, kann mittels verschiedener Verfahren beziehungsweise entscheidet werden.
 \end{enumerate}
 
 \begin{figure}[h]
@@ -232,11 +232,11 @@ Einige zufälligerweise-ausgewählte neu-erstellte Elemente werden mutiert sein.
 \end{figure}
 
 EA insgesamt sind Problem-unabhängig, das heißt, dass wenn es eine geeignete Darstellung der Lösungen und eine geeignete Zielfunktion gibt, kann theoretisch jedes Problem mittels EA optimiert werden. Aus diesem Grund gibt es bei jeden EA ein Element der \textbf{Adaptation}.\par
-In Teil 2 sowie in Teile 4 bis 6 kann \textbf{Zufälligkeit} verwendet werden, je nachdem welche Verfahren bzw. ausgewählt werden.\par
+In 2. Teil sowie in 4. bis 6. Teilen kann \textbf{Zufälligkeit} verwendet werden, je nachdem welche Verfahren jeweils ausgewählt werden.\par
 In dem Mutation-Teil, eine hoch Wahrscheinlichkeit, um Elemente zu mutieren, heißt viel \textbf{Erkundung} und weniger \textbf{Ausbeutung}, und umgekehrt.
 
-\subsection{Particle Swarm Optimization - PSO}
-Particle Swarm Optimization (PSO) ist ursprünglich in \cite{kennedy_pso} und in \cite{shi_pso} präsentiert.\par
+\subsection{Partikelschwarmoptimierung}
+Partikelschwarmoptimierung (engl particle swarm optimization oder PSO) ist ursprünglich in \cite{kennedy_pso} und in \cite{shi_pso} präsentiert.\par
 PSO ist auf menschlichen sozialen Verhalten basiert. \cite{eberhart_pso} Genauer,  PSO basiert auf der Beobachtung von Gruppen von Individuen, die zusammenarbeiten, um nicht nur ihr kollektives Verhalten in einer bestimmten Aufgabe zu verbessern, sondern auch ihr individuelles Verhalten zu verbessern.\par
 Die Grundideen hinter PSO sind folgende:
 
@@ -258,8 +258,8 @@ In PSO können die Geschwindigkeiten der ersten Bevölkerung zufällig initialis
 Da die Partikeln die beste bisher erreichte Positionen ihrer Nachbarn kennen müssen, gibt es auch Kommunikation.\par
 Die Tatsache, dass die beste bisher erreichte Positionen die Geschwindigkeit der Partikel beeinflussen, zeigt \textbf{Rückmeldung}. In welche Ausmaß wird die Partikel beeinflusst, kann entweder \textbf{Erkundung} oder \textbf{Ausbeutung} fördern.
 
-\subsection{Differential Evolution - DE}
-Es wurde erstmals in \cite{storn_de_a} und \cite{storn_de_b} über differential Evolution (DE) diskutiert. Aber die erste vielfach gelesene DE-Veröffentlichung war \cite{price_storn_de}.\par
+\subsection{Differenziale Evolution}
+Differenziale Evolution (engl. differential evolution oder DE) wurde erstmals in \cite{storn_de_a} und \cite{storn_de_b} über differential Evolution (DE) diskutiert. Aber die erste vielfach gelesene DE-Veröffentlichung war \cite{price_storn_de}.\par
 Im Gegensatz zu fast alle andere EA, DE ist nicht auf der Natur inspiriert. Eine die wichtigste Merkmale der DE ist, dass es einfach ist. Dies Merkmal ist wichtig, da es erlaubt Benutzer aus andere Bereiche (d. h. nicht Informatikern/inen oder Mathematiker/inen), es umzusetzen.\par
 Die wesentliche Schritte eines DE Algorithmuses sind die folgende:
 
