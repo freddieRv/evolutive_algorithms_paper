@@ -7,11 +7,11 @@ Folien:
 - Warum is es wichtig und schwer?
     + Wichtig
         * Resources, costs, time
-    + Schwer
-        * Complexität der Probleme
+    + Schwierig
+        * Graphs of simple, multi-objective, and multi-modal problems
 - Was ist ein EA? (Each sub-point could take up to one Folien)
     + Definition
-    + Characteristics
+    + Characteristics (A simple gif could serve to explain each of them)
         * Population
         * Iterations
         * Objective function
@@ -23,6 +23,7 @@ Folien:
     + DE
 - EA und Optimierung - Vorteile
     + Schnell Lösungen finden
+    + Keine Verwendungsbereichgrenze
 - EA und Optimierung - Nachteile
     + Wahrscheinlich nicht die beste Lösung
     + Parameter tunning is also a problem itself
