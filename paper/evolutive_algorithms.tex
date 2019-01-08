@@ -113,7 +113,7 @@ Natürlich können wir nicht sicher sein, dass wir die beste Lösung gefunden ha
 
 \section{Stand der Forschung}
 
-\lettrine[nindent=0em,lines=3]{I} n den 70er Jahren wurde erstmals über EA diskutiert. Die erste Form von EA waren die genetische Algorithmen, die in \cite{holland_ga} eingeführt würden. Seit damals wurden jedes Jahr mehrere EA präsentiert. Es ist auch üblich, dass nicht nur Varianten von schon bekannten EA eingeführt werden, sondern auch neue Anwendungen. In \cite{algorithmen_list} allein werden circa 48 EA gelistet.\par
+\lettrine[nindent=0em,lines=3]{I} n den 70ern Jahren wurde erstmals über EA diskutiert. Die erste Form von EA waren die genetische Algorithmen, die in \cite{holland_ga} eingeführt würden. Seit damals wurden jedes Jahr mehrere EA präsentiert. Es ist auch üblich, dass nicht nur Varianten von schon bekannten EA eingeführt werden, sondern auch neue Anwendungen. In \cite{algorithmen_list} allein werden circa 48 EA gelistet.\par
 Heutzutage finden sich immer mehr Anwendungen der EA in nahezu allen Bereichen. Von der Medizin \cite{ea_und_medizin} und Biologie \cite{ea_und_biologie} über das Motor- \cite{ea_und_motoren} und Flugzeugdesign \cite{ea_und_flugzeuge_a} \cite{ea_und_flugzeuge_b} bis hin zur Kunst \cite{ea_und_kunst_a} \cite{ea_und_kunst_b} und Wirtschaft \cite{ea_und_wirtschaft}.
 
 %------------------------------------------------
@@ -165,10 +165,10 @@ In Abbildung \ref{fig:metaheuristics} kann auch erkannt werden, dass der Autor P
 In diesem Paper wird folgende Definition für evolutionäre Algorithmus genommen: Ein Algorithmus, der die Lösung eines Problems durch viele Iterationen entwickelt    .
 
 \subsection{Eigenschaften der evolutionären Algorithmen}
-Folgende sind die Hauptmerkmale der EA:
+Folgende sind die Hauptelemente, die ein Algorithmus haben soll, um er als \enquote{evolutionär} zu betrachten:
 
 \begin{itemize}
-\item{Sie müssen eine Zielfunktion haben.}\\
+\item{Eine Zielfunktion.}\\
 \item{Eine - sogenannte - Bevölkerung von mögliche Lösungen.}\\
 Eine Menge von Darstellungen der Lösungen (Elemente der Domäne der Zielfunktion) des Problems, die mittels des Algorithmus und mehreren Iterationen (auch \enquote{Generationen} genannt) verarbeitet und hoffentlich verbessert werden.\\
 \item{Vorgänge, die die Elementen der Bevölkerung betreffen und verändern.}
@@ -201,7 +201,7 @@ In nächster Sektion werden verschiedene Beispiele von EA gezeigt und in jedem B
 
 \section{EA Beispiele}
 
-Heutzutage gibt es viele EA und jedes Jahr werden neue entwickelt. In dieser Sektion werden nur ein paar der bekanntesten und wichtigsten erwähnt und oberflächlich erklärt.
+\lettrine[nindent=0em,lines=3]{H} eutzutage gibt es viele EA und jedes Jahr werden neue entwickelt. In dieser Sektion werden nur ein paar der bekanntesten und wichtigsten erwähnt und oberflächlich erklärt.
 
 \subsection{Genetische Algorithmen}
 Genetische Algorithmen (engl. genetic algorithms oder GA) sind ursprünglich in \cite{holland_ga} präsentiert und danach in \cite{goldberg_ga} weiterentwickelt. Der Name \enquote{Genetic Algorithms} bezieht sich mehr auf eine Familie von Algorithmen als auf einen einzigen Algorithmus.\par
@@ -215,13 +215,13 @@ Als erstes muss man eine geeignete Codierung für die möglichen Lösungen finde
 Eine ursprüngliche Bevölkerung muss initialisiert werden. Diese Initialisierung kann entweder zufällig oder auf Vorkenntnis basiert sein. Wie viele Elemente die Bevölkerung hat, ist ein wichtiger Parameter. Je mehr Elemente es gibt desto höher die Wahrscheinlichkeit, um gute Lösungen zu finden.
 \item{Fitnessfunktion.}\par
 Die Zielfunktion des Problems.\par
-Der Wert, den die Zielfunktion ergibt, wenn sie für den Wert ausgewertet wird, den ein Element der Bevölkerung darstellt, wird die \enquote{Fitness} des Elements genannt.
+Der Wert, den ein Element der Bevölkerung darstellt, wird die Eingabe für die Zielfunktion. Der Wert, den die Zielfunktion ergibt, wird die \enquote{Fitness} des Elements genannt.
 \item{Auswahl von Einzelnen.}\par
 Zwei Elemente der Bevölkerung werden ausgewählt, um ein neues Element herzustellen. Das verfolgte Verfahren, um die Elemente auszuwählen, kann entweder zufällig sein, oder auf die Fitness der Elemente basiert. Die ausgewählten Elemente werden \enquote{Eltern} genannt.
 \item{Crossover.}\par
 Dies ist der wichtigste Teil der GA. Es definiert wie das neue Element aus die Eltern erstellt wird. Das heißt, welche Gene wird das neue Element von jeden Elternteil erben.
 \item{Mutation.}\par
-Einige zufälligerweise-ausgewählte neu-erstellte Elemente werden mutiert sein. Das heißt, dass einige Bits gekippt werden. Welche Elemente mutiert werden und wie viele und welche Bits gekippt werden, kann mittels verschiedener Verfahren beziehungsweise entscheidet werden.
+Einige zufälligerweise-ausgewählte neu-erstellte Elemente werden mutiert. Das heißt, dass einige Bits gekippt werden. Welche Elemente mutiert werden und wie viele und welche Bits gekippt werden, kann mittels verschiedener Verfahren beziehungsweise entscheidet werden.
 \end{enumerate}
 
 \begin{figure}[h]
@@ -236,15 +236,15 @@ In 2. Teil sowie in 4. bis 6. Teilen kann \textbf{Zufälligkeit} verwendet werde
 In dem Mutation-Teil, eine hoch Wahrscheinlichkeit, um Elemente zu mutieren, heißt viel \textbf{Erkundung} und weniger \textbf{Ausbeutung}, und umgekehrt.
 
 \subsection{Partikelschwarmoptimierung}
-Partikelschwarmoptimierung (engl particle swarm optimization oder PSO) ist ursprünglich in \cite{kennedy_pso} und in \cite{shi_pso} präsentiert.\par
+Partikelschwarmoptimierung (engl particle swarm optimization oder PSO) wird ursprünglich in \cite{kennedy_pso} und in \cite{shi_pso} präsentiert.\par
 PSO ist auf menschlichen sozialen Verhalten basiert. \cite{eberhart_pso} Genauer,  PSO basiert auf der Beobachtung von Gruppen von Individuen, die zusammenarbeiten, um nicht nur ihr kollektives Verhalten in einer bestimmten Aufgabe zu verbessern, sondern auch ihr individuelles Verhalten zu verbessern.\par
-Die Grundideen hinter PSO sind folgende:
+Die Grundideen hinter PSO sind die folgende:
 
 \begin{itemize}
 \item Es gibt eine Menge Partikeln, die sich mit einer beliebigen Geschwindigkeit durch den Suchraum bewegen.
-\item Der Suchraum ist in \enquote{Nachbarschaften} mit einer beliebigen gleichen Größe unterteilt.
-\item Jeder Partikeln speichert sowohl die beste Position, die sie im Suchraum besucht hat, als auch die beste Position, die ihre Nachbarn erreicht haben.
-\item Beide die Partikels beste Position und ihre Nachbarns beste Positionen beeinflussen die Partikels Geschwindigkeit.
+\item Der Suchraum wird in \enquote{Nachbarschaften} mit einer beliebigen gleichen Größe unterteilt.
+\item Jeder Partikel speichert sowohl die beste Position, die sie im Suchraum besucht hat, als auch die beste Position, die ihre Nachbarn erreicht haben.
+\item Beide die Partikels beste Position und ihre Nachbarns beste Position beeinflussen die Partikels Geschwindigkeit.
 \end{itemize}
 
 \begin{figure}[h]
@@ -254,25 +254,25 @@ Die Grundideen hinter PSO sind folgende:
 \includegraphics[width=0.5\textwidth]{images/pso_pseudo.png}
 \end{figure}
 
-In PSO können die Geschwindigkeiten der ersten Bevölkerung zufällig initialisiert werden. Daher haben wir ein Element der \textbf{Zufälligkeit}.\par
-Da die Partikeln die beste bisher erreichte Positionen ihrer Nachbarn kennen müssen, gibt es auch Kommunikation.\par
-Die Tatsache, dass die beste bisher erreichte Positionen die Geschwindigkeit der Partikel beeinflussen, zeigt \textbf{Rückmeldung}. In welche Ausmaß wird die Partikel beeinflusst, kann entweder \textbf{Erkundung} oder \textbf{Ausbeutung} fördern.
+In PSO können die Geschwindigkeiten der ersten Bevölkerung zufällig initialisiert werden. Daher gibt es ein Element der \textbf{Zufälligkeit}.\par
+Da die Partikeln die besten bisher erreichten Positionen ihrer Nachbarn kennen muss, gibt es auch \textbf{Kommunikation}.\par
+\textbf{Rückmeldung} wird verwendet, indem die besten bisher erreichten Positionen die Geschwindigkeit der Partikel beeinflussen. In welchen Ausmaß wird die Partikel beeinflusst, kann entweder \textbf{Erkundung} oder \textbf{Ausbeutung} fördern.
 
 \subsection{Differenziale Evolution}
-Differenziale Evolution (engl. differential evolution oder DE) wurde erstmals in \cite{storn_de_a} und \cite{storn_de_b} über differential Evolution (DE) diskutiert. Aber die erste vielfach gelesene DE-Veröffentlichung war \cite{price_storn_de}.\par
-Im Gegensatz zu fast alle andere EA, DE ist nicht auf der Natur inspiriert. Eine die wichtigste Merkmale der DE ist, dass es einfach ist. Dies Merkmal ist wichtig, da es erlaubt Benutzer aus andere Bereiche (d. h. nicht Informatikern/inen oder Mathematiker/inen), es umzusetzen.\par
-Die wesentliche Schritte eines DE Algorithmuses sind die folgende:
+Differenziale Evolution (engl. differential evolution oder DE) wurde erstmals in \cite{storn_de_a} und \cite{storn_de_b} erwähnt. Aber die erste vielfach gelesene DE-Veröffentlichung war \cite{price_storn_de}.\par
+Im Gegensatz zu fast alle anderen EA, DE ist nicht auf der Natur inspiriert. Eine der wichtigsten Merkmale der DE ist, dass es einfach ist. Dies Merkmal ist wichtig, da es Benutzer aus anderen Bereiche (d. h. nicht Informatikern/inen oder Mathematiker/inen) erlaubt, es umzusetzen.\par
+Die wesentliche Schritte eines DE Algorithmus sind die folgende:
 
 \begin{enumerate}
-\item Die Bevölkerung eines DE Algorithmus besteht auf Vektoren mit $n$ Elemente. Wo $n$ ist auch die Dimension des Problems. Weiterhin, jeder Vektor selbst stellt eine mögliche Lösung des Problems dar.
+\item Die Bevölkerung eines DE Algorithmus besteht auf Vektoren mit $n$ Elemente. Wo $n$ die Dimension des Problems ist. Weiterhin, jeder Vektor selbst stellt eine mögliche Lösung des Problems dar.
 \item Zwei Vektoren $x_{r2}, x_{r3} \mid r2 \neq r3$ werden ausgewählt.
 \item Die Differenz zwischen $x_{r2}$ und $x_{r3}$ wird berechnet.
-\item Die skalierte Differenz wird zu einem dritten Vektor $x_{r1} \mid r1 \notin \{ r2, r3 \}$ addiert. Das wird eine neue mögliche Lösung $v_i$ ergeben.
+\item Die skalierte Differenz wird zu einem dritten Vektor $x_{r1} \mid r1 \notin \{ r2, r3 \}$ addiert. Dies wird eine neue mögliche Lösung $v_i$ ergeben.
 \item $v_i$ wird mit einem Vektor $x_i \mid i \notin \{ r1, r2, r3 \}$ kombiniert.
 \item $x_i$ wird gegen $u_i$ vergleicht und nur der beste wird behaltet.
 \end{enumerate}
 
-Abbildung \ref{fig:de_beispiel} zeigt Schritte 2 bis 4 für ein Problem mit 2 Dimensionen. Abbildung \ref{fig:de_pseudo} zeigt einen ganze DE Algorithmus pseudo-Code für $n$ Dimensionen.\par
+Abbildung \ref{fig:de_beispiel} zeigt 2. bis 4. Schritte für ein Problem mit 2 Dimensionen. Abbildung \ref{fig:de_pseudo} zeigt einen kompletten DE Algorithmus pseudo-Code für $n$ Dimensionen.\par
 
 \begin{figure}[h]
 \caption{Grundlegende Idee von DE. Quelle: \cite{wiley_evolutionary}}
@@ -288,25 +288,25 @@ Abbildung \ref{fig:de_beispiel} zeigt Schritte 2 bis 4 für ein Problem mit 2 Di
 \includegraphics[width=0.5\textwidth]{images/de_pseudo.png}
 \end{figure}
 
-Der Algorithmus, den die Abbildung \ref{fig:de_pseudo} beschreibt, ist \enquote{DE/rand/1/bin} genannt und es ist die einfachste Variante der DE Algorithmen. Andere Varianten sind z. B. \enquote{DE/best/1/L}, \enquote{DE/best/2/bin}, \enquote{DE/rand/1/exp},  u. v. a. m.\par
-Jedes Teil dieser Namen bezieht sich auf die Verfahren, die für bestimmte Schritte der DE Algorithmen verwendet werden.\par
-Zum Beispiel der \enquote{rand/best}-Teil\footnote{\enquote{best} und \enquote{rand} sind nicht die einzige Varianten.} beschreibt wie Vektoren $x_{r1}$ und $x_{r2}$ im 2. Schritt ausgewählt werden. \enquote{rand} bedeutet, dass die Vektoren zufälligerweise ausgewählt werden, während \enquote{best} heißt, dass die beste Vektoren eine höher Wahrscheinlichkeit haben, um ausgewählt zu sein.\par
+Der Algorithmus, den die Abbildung \ref{fig:de_pseudo} beschreibt, wird \enquote{DE/rand/1/bin} genannt und es stellt die einfachste Variante der DE Algorithmen dar. Andere Varianten sind zum Beispiel \enquote{DE/best/1/L}, \enquote{DE/best/2/bin}, \enquote{DE/rand/1/exp}.\par
+Jeder Teil dieser Namen bezieht sich auf der Verfahren, die für bestimmte Schritte der DE Algorithmen verwendet werden.\par
+Zum Beispiel der \enquote{rand/best}-Teil\footnote{\enquote{best} und \enquote{rand} sind nicht die einzige Varianten.} beschreibt wie Vektoren $x_{r1}$ und $x_{r2}$ im 2. Schritt ausgewählt werden. \enquote{rand} bedeutet, dass die Vektoren zufälligerweise ausgewählt werden, während \enquote{best} heißt, dass die beste Vektoren eine höher Wahrscheinlichkeit haben, um ausgewählt zu werden.\par
 In \cite{love_u_mex} werden die Leistungen mehrerer Varianten von DE Algorithmen vergleicht.\par
-Wenn Vektoren $x_{r1}$ und $x_{r2}$ zufällig ausgewählt werden, gibt es ein Element der \textbf{Zufälligkeit}. Wenn nur die beste Vektoren ausgewählt werden, wird \textbf{Ausbeutung} gefördert. Die Tatsache, dass nur die beste Vektor im 6. Schritt behaltet wird, zeigt \textbf{Rückmeldung}. Die Kombination, die im 5. Schritt stattfindet, könnte auch entweder \textbf{Erkundung} oder \textbf{Ausbeutung} fördern.
+Wenn Vektoren $x_{r1}$ und $x_{r2}$ zufällig ausgewählt werden, gibt es ein Element der \textbf{Zufälligkeit}. Wenn nur die besten Vektoren ausgewählt werden, wird \textbf{Ausbeutung} gefördert. Die Tatsache, dass nur die beste Vektor im 6. Schritt behaltet wird, zeigt die Verwendung von \textbf{Rückmeldung}. Die Kombination, die im 5. Schritt stattfindet, könnte auch entweder \textbf{Erkundung} oder \textbf{Ausbeutung} fördern.
 
 %------------------------------------------------
 
 \section{Diskussion}
-\lettrine[nindent=0em,lines=3]{D} as größte Vorteil des evolutionären Algorithmen ist, dass es praktisch keine Grenze dafür gibt, wo können sie verwendet werden. Wie vorher gesagt, wenn es eine geeignete Darstellung der Lösungen eines Problems gibt, und eine geeignete Zielfunktion sich definieren lässt, kann jedes Problem mit EA optimiert werden.\par
-Eine Nachteil der EA ist, dass eine geeignete Zielfunktion zu definieren ein Problem gleich groß (oder auch größer) als das ursprüngliche erstellen könnte. Eine Möglichkeit, dies zu vermeiden ist das Problem zu teilen. In der Praxis werden oft EA verwendet, um mehrere separate Teile großer komplexer Systemen zu optimieren.\par
-Noch ein Nachteil der EA ist, dass die Einstellung des Parametern der Algorithmen könnte auch ein großes Problem darstellen. Die Leistung der Algorithmen ist wirklich davon abhängig, wie die ursprüngliche Bevölkerung initialisiert ist, und was für Werte für die Parametern der Algorithmen ausgewählt werden. Dies ist so ein großes Problem geworden, dass dazu Forschung betrieben wird. Um einige Beispiele zu nennen \cite{pso_tuning_a}, \cite{pso_tuning_b}, und \cite{pso_tuning_c} stellen Verfahren zur Parametereinstellung für PSO vor.\par
-EA sollten berücksichtigt werden, immer wenn ein schweres Optimierungsproblem gelöst werden soll. Das bedeutet aber nicht, dass EA sind immer die beste Wahl für den Job; Wenn eine Gebäude oder ein komplexes Transportsystem projektieren werden soll, dann sind EA eine geeignete Werkzeug; Wenn ein komplexe elektrische Schaltung oder ein Computerprogramm entwerfen werden soll, dann können die EA die Aufgabe erfüllen; Aber wenn das Problem jedoch mit klassischen Methoden, entweder analytisch oder numerisch, eine gute genug Lösung bietet, ist es besser, diese Methoden zu verwenden.
+\lettrine[nindent=0em,lines=3]{D} er größte Vorteil der evolutionären Algorithmen ist, dass es praktisch keine Grenze für ihren Verwendungsbereich gibt. Wie vorher gesagt, wenn es eine geeignete Darstellung der Lösungen eines Problems gibt, und eine geeignete Zielfunktion sich definieren lässt, kann jedes Problem mit EA optimiert werden.\par
+Ein Nachteil der EA ist, dass die Definition einer geeigneten Zielfunktion ein Problem gleich groß als das ursprüngliche erstellen könnte. Dies ist vermeidbar, indem das Problem geteilt wird. In der Praxis werden oft EA verwendet, um mehrere separate Teile großer komplexer Systemen zu optimieren.\par
+Noch ein Nachteil der EA ist, dass die Einstellung des Parametern der Algorithmen auch ein großes Problem darstellen könnte. Die Leistung der Algorithmen ist in großer Maßnahme davon abhängig, wie die ursprüngliche Bevölkerung initialisiert wird, und welche Werte für die Parameter der Algorithmen ausgewählt werden. Dies ist so ein großes Problem geworden, dass dazu Forschung betrieben wird. Um einige Beispiele zu nennen, \cite{pso_tuning_a}, \cite{pso_tuning_b}, und \cite{pso_tuning_c} stellen Verfahren zur Parametereinstellung für PSO vor.\par
+EA sollten berücksichtigt werden, immer wenn ein schwieriges Optimierungsproblem gelöst werden soll. Das bedeutet aber nicht, dass EA immer die beste Wahl für den Job sind; Wenn eine Gebäude oder ein komplexes Transportsystem projektieren werden soll, dann sind EA eine geeignete Werkzeug; Wenn eine komplexe elektrische Schaltung oder ein Computerprogramm entwerfen werden soll, dann können die EA die Aufgabe erfüllen; Aber wenn das Problem jedoch mit klassischen Methoden, entweder analytisch oder numerisch, eine gute genug Lösung bietet, ist es besser, diese Methoden zu verwenden.
 
 %------------------------------------------------
 
 \section{Fazit}
 
-\lettrine[nindent=0em,lines=3]{D} ank der Wachstum des Informatikbereichs und der heutige Rechnerleistung es ist immer mehr möglich, größer und komplexer Systeme zu entwickeln. Dies bringt auch große und komplexe Herausforderungen mit. EA (und KI insgesamt) sind aber gute Werkzeuge um diese neue Herausforderungen zu überwinden.\par
+\lettrine[nindent=0em,lines=3]{D} ank dem Wachstum des Informatikbereichs und der heutigen Rechnerleistung ist es immer mehr möglich, größer und komplexer Systeme zu entwickeln. Dies bringt auch große und komplexe Herausforderungen mit. EA (und KI insgesamt) sind aber gute Werkzeuge, um diese neue Herausforderungen zu überwinden.\par
 Künftig sollen EA in möglichst immer mehr Bereiche eingeführt worden. Ferner sollen wir weiterhin die Natur als Inspiration betrachten. Sowohl in der Wissenschaft, als auch in der Kunst, hat sich die Natur als die beste Muse erwiesen.
 
 %----------------------------------------------------------------------------------------
