@@ -101,12 +101,12 @@
 %----------------------------------------------------------------------------------------
 
 \section{Einleitung}
-Das Problem des Handlungsreisenden (engl. traveling salesman problem oder TSP) ist ein sehr bekanntes und studiertes Thema in den Informatik- und Optimierung- Bereich. Es sieht folgendermaßen aus:\par
+Das Problem des Handlungsreisenden (engl. traveling salesman problem oder TSP) ist ein sehr bekanntes und studiertes Thema in den Informatik- und Optimierungsbereich. Es sieht folgendermaßen aus:\par
 Eine Reihenfolge für den Besuch mehrerer Orte muss so gewählt sein, dass keine Station, außer der ersten, mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz ist, und die erste Station gleich wie die letzte Station ist. \cite{wiki_tsp}\par
-Sei $n$ die Anzahl der Stationen, dann gibt es $(n-1)!$ mögliche Lösungen für das TSP. Daher wenn $n=4$, dann gibt es $6$ mögliche Lösungen. Es ist nicht schwer, einen brute-force \footnote{Auch Exhaustionsmethode, ist eine Lösungsmethode für Probleme, die auf dem Ausprobieren aller möglichen (oder zumindest vieler möglicher) Fälle beruht. \cite{wiki_brute_force}} Ansatz zu verfolgen, für ein Problem, das nur 6 Lösungen hat. Aber wenn $n=50$, dann gibt es circa $6,1\e{62}$ Lösungen.\par
+Sei $n$ die Anzahl der Stationen, dann gibt es $(n-1)!$ mögliche Lösungen für das TSP. Daher wenn $n=4$, dann gibt es $6$ mögliche Lösungen. Es ist nicht schwierig, einen brute-force \footnote{Auch Exhaustionsmethode, ist eine Lösungsmethode für Probleme, die auf dem Ausprobieren aller möglichen (oder zumindest vieler möglicher) Fälle beruht. \cite{wiki_brute_force}} Ansatz zu verfolgen, für ein Problem, das nur 6 Lösungen hat. Aber wenn $n=50$, dann gibt es circa $6,1\e{62}$ Lösungen.\par
 Folgendes ist hilfreich, um diese Anzahl in einer Perspektive zu setzen: Das Universum ist circa 15 Milliarde Jahre alt, das ist $4,7\e{17}$ Sekunden. Wenn es eine Billion Rechner gäbe, die jede seit Anfang des Universums eine Billion Lösungen pro Sekunde berechnen würde, so wären bisher nur $4,7\e{41}$ Lösungen berechnet worden.\par
 Das TSP ist nur ein Beispiel des vielfältigen Probleme, die zu den kombinatorischen Problemen gehören, das heißt: Probleme, für die kein brute-force Ansatz möglich ist. In diesem Fall sind evolutionäre Algorithmen (EA) ein sinnvolles Werkzeug, um optimale Lösungen zu finden.\par
-Natürlich kann man nicht sicher sein, dass man die beste Lösung gefunden hat, außer würde man jede mögliche Lösung berechnen. Aber wie mit dem TSP-Beispiel gezeigt worden, ist, kann man nicht immer alle mögliche Lösungen (in angemessener Zeit) berechnen.
+Natürlich kann man nicht sicher sein, dass man die beste Lösung gefunden hat, außer würde man jede mögliche Lösung berechnen. Aber wie mit dem TSP-Beispiel gezeigt worden, kann man nicht immer alle mögliche Lösungen (in angemessener Zeit) berechnen.
 
 %------------------------------------------------
 
@@ -125,9 +125,9 @@ Das Ziel der Optimierung ist es, die bestmögliche Lösung des Problems zu finde
 Es gibt verschiedene Klassifizierungen oder Arten von Optimierung:
 
 \begin{itemize}
-\item{Eingeschränkte Optimierung - Die Entscheidungsvariable kann nicht irgendwelche Werte aus der Domäne der Zielfunktion nehmen. Es gibt Einschränkungen dafür.}
-\item{Multi-objective Optimierung - Das Problem besteht aus vielfältigen Zielfunktionen.}
-\item{Multi-modale Optimierung - Die Zielfunktion hat mehrere Minima bzw. Maxima. Abbildung \ref{fig:rastrigin} zeigt eine multi-modale Funktion.}
+\item{\textbf{Eingeschränkte Optimierung} - Die Entscheidungsvariable kann nicht irgendwelche Werte aus der Domäne der Zielfunktion nehmen. Es gibt Einschränkungen dafür.}
+\item{\textbf{Multi-objective Optimierung} - Das Problem besteht aus vielfältigen Zielfunktionen.}
+\item{\textbf{Multi-modale Optimierung} - Die Zielfunktion hat mehrere Minima bzw. Maxima. Abbildung \ref{fig:rastrigin} zeigt eine multi-modale Funktion.}
 \end{itemize}
 
 \begin{figure}
@@ -155,30 +155,30 @@ EA werden zwar als Teil der künstliche Intelligenz (KI) betrachtet, aber genau 
 
 In Abbildung \ref{fig:metaheuristics} kann auch erkannt werden, dass der Autor Particle Swarm Optimization (PSO) und Ant Colony Optimization (ACO) nicht als EA betrachtet. Trotzdem gibt es andere Autoren (wie z. B. \cite{wiley_evolutionary}), die diese Algorithmen genau für EA halten.\par
 
-In dieser Arbeit wird folgende Definition für evolutionäre Algorithmen herangezogen: Ein Algorithmus, der die Lösung eines Problems durch viele Iterationen entwickelt.
+In dieser Arbeit wird folgende Definition für evolutionärer Algorithmus herangezogen: Ein Algorithmus, der die Lösung eines Problems durch viele Iterationen entwickelt.
 
 \subsection{Eigenschaften der evolutionären Algorithmen}
 Folgende sind die Hauptelemente, die ein Algorithmus haben soll, damit es als \enquote{evolutionär} betrachten werden kann:
 
 \begin{itemize}
-\item{Eine Zielfunktion.}
-\item{Eine sogenannte Bevölkerung von mögliche Lösungen - Eine Menge von Darstellungen der Lösungen (Elemente der Domäne der Zielfunktion) des Problems, die mittels des Algorithmus und mehreren Iterationen (auch \enquote{Generationen} genannt) verarbeitet und hoffentlich verbessert werden.}
-\item{Vorgänge, die die Elementen der Bevölkerung betreffen und verändern.}
+\item{\textbf{Eine Zielfunktion} - Der Wert, den ein Element der Bevölkerung darstellt, wird die Eingabe für die Zielfunktion. Der Wert, den die Zielfunktion ergibt, wird als \enquote{Fitness} oder \enquote{Kosten} des Elements bezeichnet}
+\item{\textbf{Eine sogenannte Bevölkerung von mögliche Lösungen} - Eine Menge von Darstellungen der Lösungen (Elemente der Domäne der Zielfunktion) des Problems, die mittels des Algorithmus und mehreren Iterationen (auch \enquote{Generationen} genannt) verarbeitet und verbessert werden.}
+\item{\textbf{Vorgänge, die die Elementen der Bevölkerung betreffen und verändern.}}
 \end{itemize}
 
-Die meisten EA sind aus der Natur inspiriert, das heißt, dass Wissenschaftler/innen Ereignisse, Systeme, und Mechanismen der Natur beobachten und danach versuchen, sie mit Algorithmen zu emulieren. EA werden \enquote{evolutionär} genannt, denn sie ursprünglich auf der Evolution basieren. \cite{holland_ga}
+Die meisten EA sind aus der Natur inspiriert, das heißt, dass WissenschaftlerInnen Ereignisse, Systeme, und Mechanismen der Natur beobachten und danach versuchen, sie mit Algorithmen zu emulieren. EA werden \enquote{evolutionär} genannt, denn sie ursprünglich auf der Evolution basieren. \cite{holland_ga}
 
 \subsection{Eigenschaften der Intelligenz}
 Wie bereits erwähnt, EA werden als Teil der KI zu betrachten, weil sie Eigenschaften intelligenter natürlicher Systeme emulieren.\par
 Laut \cite[Kapitel 2.7]{wiley_evolutionary} sind die folgenden Eigenschaften notwendig, um ein System als intelligent zu betrachten:
 
 \begin{itemize}
-\item{Adaptation - Ein intelligentes System muss in hohem Maße an unvorhersehbare Änderungen anpassbar sein. Lernen ist daher unerlässlich.}
-\item{Zufälligkeit - Obwohl Zufälligkeit meistens als eine schlechte Eigenschaft betrachtet wird, ist es in gewissem Maße notwendig, damit neue Lösungen eines Problems gefunden werden können.}
-\item{Kommunikation -  Zwar wird eine einzige Ameise nicht als intelligent gesehen, aber eine Ameisenkolonie wird (dank Kommunikation durch Pheromone) als eine super-intelligente Einheit betrachtet.}
-\item{Rückmeldung - Ein System kann sich nicht anpassen und verbessern, wenn es seine Umgebung nicht erkennen und darauf reagieren kann. Auch um zu erlernen, muss ein System seine Fehler (mittels Rückmeldung) erkennen.}
-\item{Erkundung - Das heißt, neue Lösungen finden, neue Wege erkunden, neue Ideen erzeugen. Normalerweise ist Erkundung eng mit Zufälligkeit verbunden.}
-\item{Ausbeutung - Das Gegenteil von Erkundung. Das heißt, schon bekannte Lösungen und Wege (oder Kenntnisse) ausnutzen.}
+\item{\textbf{Adaptation} - Ein intelligentes System muss in hohem Maße an unvorhersehbare Änderungen anpassbar sein. Lernen ist daher unerlässlich.}
+\item{\textbf{Zufälligkeit} - Obwohl Zufälligkeit meistens als eine schlechte Eigenschaft betrachtet wird, ist es in gewissem Maße notwendig, damit neue Lösungen eines Problems gefunden werden können.}
+\item{\textbf{Kommunikation} -  Zwar wird eine einzige Ameise nicht als intelligent gesehen, aber eine Ameisenkolonie wird (dank Kommunikation durch Pheromone) als eine super-intelligente Einheit betrachtet.}
+\item{\textbf{Rückmeldung} - Ein System kann sich nicht anpassen und verbessern, wenn es seine Umgebung nicht erkennen und darauf reagieren kann. Auch um zu erlernen, muss ein System seine Fehler (mittels Rückmeldung) erkennen.}
+\item{\textbf{Erkundung} - Das heißt, neue Lösungen finden, neue Wege erkunden, neue Ideen erzeugen. Normalerweise ist Erkundung eng mit Zufälligkeit verbunden.}
+\item{\textbf{Ausbeutung} - Das Gegenteil von Erkundung. Das heißt, schon bekannte Lösungen und Wege (oder Kenntnisse) ausnutzen.}
 \end{itemize}
 
 In den nächsten Sektion werden verschiedene Beispiele von EA gezeigt und in jedem Beispiel wird erwähnt, welches Teil des Algorithmus welche Eigenschaft der Intelligenz  zu emulieren versucht. Es ist auch wichtig zu nennen, dass nicht jede Eigenschaft des Intelligenzes von jeden EA repliziert ist.
@@ -190,16 +190,15 @@ Heutzutage gibt es viele EA und jedes Jahr werden neue entwickelt. In dieser Sek
 
 \subsection{Genetische Algorithmen}
 Genetische Algorithmen (engl. genetic algorithms oder GA) sind ursprünglich in \cite{holland_ga} präsentiert und danach in \cite{goldberg_ga} weiterentwickelt. Der Name \enquote{Genetic Algorithms} bezieht sich mehr auf eine Familie von Algorithmen als auf einen einzigen Algorithmus.\par
-GA sind die ersten vorgestellten, bekanntesten und am meisten verwendeten EA. Ursprünglich waren sie dafür entwickelt um adaptierbare Systeme zu studieren. Sie sind Simulationen der natürlichen Selektion. Daher versuchen sie die Evolution zu simulieren.\par
-Es gibt sechs Hauptteile der GA:
+GA sind die ersten vorgestellten, bekanntesten und am meisten verwendeten EA. Ursprünglich waren sie dafür entwickelt um adaptierbare Systeme zu studieren. Sie sind Simulationen der natürlichen Selektion. Überdies versuchen sie die Evolution zu simulieren.\par
+Folgende sind die Hauptteile der GA:
 
 \begin{enumerate}
-\item{Codierung der Lösungen - Als erstes muss man eine geeignete Codierung für die möglichen Lösungen finden. Das heißt, eine einfach zu verarbeitende Darstellung für die Lösungen zu definieren. Eine der am häufigsten verwendeten Codierungen ist eine Bitfolge. In dieser Codierung wird jedes Bit \enquote{Gen} genannt.}
-\item{Ursprüngliche Bevölkerung - Eine ursprüngliche Bevölkerung muss initialisiert werden. Diese Initialisierung kann entweder zufällig oder auf Vorkenntnis basiert werden. Wie viele Elemente die Bevölkerung hat, ist ein wichtiger Parameter. Je mehr Elemente es gibt desto, höher ist die Wahrscheinlichkeit um geeignete Lösungen zu finden.}
-\item{Fitnessfunktion - Die Zielfunktion des Problems. Der Wert, den ein Element der Bevölkerung darstellt, wird die Eingabe für die Zielfunktion. Der Wert, den die Zielfunktion ergibt, wird als \enquote{Fitness} des Elements bezeichnet.}
-\item{Auswahl von Einzelnen - Zwei Elemente der Bevölkerung werden ausgewählt, um ein neues Element herzustellen. Das verfolgte Verfahren, um die Elemente auszuwählen, kann entweder zufällig sein, oder auf der Fitness der Elemente basieren. Die ausgewählten Elemente werden \enquote{Eltern} genannt.}
-\item{Crossover - Dies ist der wichtigste Teil der GA. Es definiert wie das neue Element aus den Eltern erstellt wird. Das heißt, welche Gene das neue Element von jedem Elternteil erben wird.}
-\item{Mutation - Einige per Zufall ausgewählte neu erstellte Elemente werden mutiert. Das heißt, dass einige Bits gekippt werden. Welche Elemente mutiert werden und wie viele und welche Bits gekippt werden, kann mittels verschiedener Verfahren entschieden werden.}
+\item{\textbf{Codierung der Lösungen} - Als erstes muss man eine geeignete Codierung für die möglichen Lösungen finden. Das heißt, eine einfach zu verarbeitende Darstellung für die Lösungen zu definieren. Die am häufigsten verwendeten Codierungen sind eine Bitfolge und ein Vektor reeller Zahlen. In diesen Codierungen wird jedes Bit beziehungsweise reelle Zahl \enquote{Gen} genannt.}
+\item{\textbf{Ursprüngliche Bevölkerung} - Eine ursprüngliche Bevölkerung muss initialisiert werden. Diese Initialisierung kann entweder zufällig oder auf Vorkenntnis basiert werden. Wie viele Elemente die Bevölkerung hat, ist ein wichtiger Parameter. Je mehr Elemente es gibt desto, höher ist die Wahrscheinlichkeit um geeignete Lösungen zu finden, und desto geringer ist der Zeitaufwand.}
+\item{\textbf{Auswahl von Einzelnen} - Zwei Elemente der Bevölkerung werden ausgewählt, um ein neues Element herzustellen. Das verfolgte Verfahren, um die Elemente auszuwählen, kann entweder zufällig sein, oder auf der Fitness der Elemente basieren. Die ausgewählten Elemente werden \enquote{Eltern} genannt.}
+\item{\textbf{Crossover} - Dies ist der wichtigste Teil der GA. Es definiert wie ein neues Element aus den Eltern erstellt wird. Das heißt, welche Gene die neuen Elemente von jedem Elternteil erben werden.}
+\item{\textbf{Mutation} - Einige per Zufall ausgewählte neu erstellte Elemente werden mutiert. Das heißt, dass einige Bits gekippt werden. Welche Elemente mutiert werden und wie viele und welche Bits gekippt werden, kann mittels verschiedener Verfahren entschieden werden.}
 \end{enumerate}
 
 \begin{figure}
@@ -209,14 +208,13 @@ Es gibt sechs Hauptteile der GA:
 \includegraphics[width=0.5\textwidth]{images/ga_pseudo.png}
 \end{figure}
 
-EA sind insgesamt Problem-unabhängig, das heißt, dass wenn es eine geeignete Darstellung der Lösungen und eine geeignete Zielfunktion gibt, kann theoretisch jedes Problem mittels EA optimiert werden. Aus diesem Grund gibt es bei jeden EA ein Element der \textbf{Adaptation}.\par
-In 2. sowie in 4. bis 6. Teile kann \textbf{Zufälligkeit} verwendet werden, je nachdem welche Verfahren jeweils ausgewählt werden.\par
-In dem Mutationsteil, eine hohe Wahrscheinlichkeit, um Elemente zu mutieren, heißt viel \textbf{Erkundung} und weniger \textbf{Ausbeutung}, während eine geringe Wahrscheinlichkeit bedeutet viel \textbf{Ausbeutung} und weniger \textbf{Erkundung}.
+EA sind insgesamt Problem-unabhängig, das bedeutet, dass wenn es eine geeignete Darstellung der Lösungen und eine geeignete Zielfunktion gibt, kann theoretisch jedes Problem mittels EA optimiert werden. Aus diesem Grund gibt es bei jeden EA ein Element der \textbf{Adaptation}.\par
+In allen Teile der GA außer die Erste kann \textbf{Zufälligkeit} verwendet werden, je nachdem welche Verfahren jeweils ausgewählt werden. In dem Mutationsteil, eine hohe Wahrscheinlichkeit, um Elemente zu mutieren, heißt viel \textbf{Erkundung} und weniger \textbf{Ausbeutung}, während eine geringe Wahrscheinlichkeit bedeutet viel \textbf{Ausbeutung} und weniger \textbf{Erkundung}.
 
 \subsection{Partikelschwarmoptimierung}
-Partikelschwarmoptimierung (engl particle swarm optimization oder PSO) wird ursprünglich in \cite{kennedy_pso} und in \cite{shi_pso} präsentiert.\par
+Partikelschwarmoptimierung (engl. particle swarm optimization oder PSO) wird ursprünglich in \cite{kennedy_pso} und in \cite{shi_pso} präsentiert.\par
 PSO basiert auf menschlichen sozialen Verhalten. \cite{eberhart_pso} Genauer gesagt, PSO basiert auf der Beobachtung von Gruppen von Individuen, die zusammenarbeiten, um nicht nur ihr kollektives Verhalten in einer bestimmten Aufgabe zu verbessern, sondern auch ihr individuelles Verhalten zu verfeinern.\par
-Die Grundideen hinter PSO ist die folgende:
+Die Grundidee hinter PSO ist die folgende:
 
 \begin{itemize}
 \item{Es gibt eine Menge von Partikeln, die sich mit einer beliebigen Geschwindigkeit durch den Suchraum bewegen.}
@@ -232,13 +230,11 @@ Die Grundideen hinter PSO ist die folgende:
 \includegraphics[width=0.5\textwidth]{images/pso_pseudo.png}
 \end{figure}
 
-In PSO können die Geschwindigkeiten der ersten Bevölkerung zufällig initialisiert werden. Daher gibt es ein Element der \textbf{Zufälligkeit}.\par
-Da die Partikeln, die besten bisher erreichten Positionen ihrer Nachbarn kennen müssen, gibt es auch \textbf{Kommunikation}.\par
-\textbf{Rückmeldung} wird verwendet, indem die besten bisher erreichten Positionen die Geschwindigkeit der Partikel beeinflussen. In welchem Ausmaß die Partikel beeinflusst wird, kann entweder \textbf{Erkundung} oder \textbf{Ausbeutung} fördern.
+In PSO können die Geschwindigkeiten der ersten Bevölkerung zufällig initialisiert werden. Daher gibt es ein Element der \textbf{Zufälligkeit}. Da die Partikeln, die besten bisher erreichten Positionen ihrer Nachbarn kennen müssen, gibt es auch \textbf{Kommunikation}. \textbf{Rückmeldung} wird verwendet, indem die besten bisher erreichten Positionen die Geschwindigkeit der Partikel beeinflussen. In welchem Ausmaß die Partikel beeinflusst wird, kann entweder \textbf{Erkundung} oder \textbf{Ausbeutung} fördern.
 
 \subsection{Differenziale Evolution}
 Differenziale Evolution (engl. differential evolution oder DE) wurde erstmals in \cite{storn_de_a} und \cite{storn_de_b} erwähnt. Aber die erste vielfach gelesene DE-Veröffentlichung war \cite{price_storn_de}.\par
-Im Gegensatz zu fast allen anderen EA, ist DE nicht nach der Natur inspiriert. Eine der wichtigsten Merkmale der DE ist, dass es einfach ist. Dieses Merkmal ist wichtig, da es Benutzer aus anderen Bereiche (d. h. nicht Informatikern/inen oder Mathematiker/inen) erlaubt, es umzusetzen.\par
+Im Gegensatz zu fast allen anderen EA, ist DE nicht nach der Natur inspiriert. Eine der wichtigsten Merkmale der DE ist, dass es einfach ist. Dieses Merkmal ist wichtig, da es Benutzer aus anderen Bereiche (d. h. nicht InformatikernInen oder MathematikerInen) erlaubt, es umzusetzen.\par
 Die wesentliche Schritte eines DE Algorithmus sind die folgende:
 
 \begin{enumerate}
@@ -247,13 +243,13 @@ Die wesentliche Schritte eines DE Algorithmus sind die folgende:
 \item Die Differenz zwischen $x_{r2}$ und $x_{r3}$ wird berechnet.
 \item Die skalierte Differenz wird zu einem dritten Vektor $x_{r1} \mid r1 \notin \{ r2, r3 \}$ addiert. Daraus wird sich eine neue mögliche Lösung $v_i$ ergeben.
 \item $v_i$ wird mit einem Vektor $x_i \mid i \notin \{ r1, r2, r3 \}$ kombiniert.
-\item $x_i$ wird gegen $u_i$ vergleichen und nur der Beste wird behalten.
+\item Die Fitness von $x_i$ und $u_i$ werden vergleichen und nur den Vektor mit die besten Fitness wird behalten.
 \end{enumerate}
 
 Abbildung \ref{fig:de_beispiel} zeigt 2. bis 4. Schritte für ein Problem mit 2 Dimensionen. Abbildung \ref{fig:de_pseudo} zeigt einen kompletten DE Algorithmus pseudo-Code für $n$ Dimensionen.\par
 
 \begin{figure}
-\caption{Grundlegende Idee von DE. Quelle: \cite[p.~294]{wiley_evolutionary}}
+\caption{Grundlegende Idee der DE. Quelle: \cite[p.~294]{wiley_evolutionary}}
 \label{fig:de_beispiel}
 \centering
 \includegraphics[width=0.5\textwidth]{images/de_beispiel.png}
@@ -268,7 +264,7 @@ Abbildung \ref{fig:de_beispiel} zeigt 2. bis 4. Schritte für ein Problem mit 2 
 
 Der Algorithmus, den die Abbildung \ref{fig:de_pseudo} beschreibt, wird \enquote{DE/rand/1/bin} genannt und stellt die einfachste Variante der DE Algorithmen dar. Andere Varianten sind zum Beispiel \enquote{DE/best/1/L}, \enquote{DE/best/2/bin}, \enquote{DE/rand/1/exp}.\par
 Jeder Teil dieser Namen bezieht sich auf die Verfahren, die für bestimmte Schritte der DE Algorithmen verwendet werden.\par
-Zum Beispiel der \enquote{rand/best}-Teil\footnote{\enquote{best} und \enquote{rand} sind nicht die einzige Varianten.} beschreibt wie Vektoren $x_{r1}$ und $x_{r2}$ im 2. Schritt ausgewählt werden. \enquote{rand} bedeutet, dass die Vektoren zufälligerweise ausgewählt werden, während \enquote{best} heißt, dass die beste Vektoren eine höhere Wahrscheinlichkeit haben, um ausgewählt zu werden.\par
+Zum Beispiel der \enquote{rand/best}-Teil\footnote{\enquote{best} und \enquote{rand} sind nicht die einzige Varianten.} beschreibt wie Vektoren $x_{r1}$ und $x_{r2}$ im 2. Schritt ausgewählt werden. \enquote{rand} bedeutet, dass die Vektoren per Zufall ausgewählt werden, während \enquote{best} heißt, dass die beste Vektoren eine höhere Wahrscheinlichkeit haben, um ausgewählt zu werden.\par
 In \cite{love_u_mex} werden die Leistungen mehrerer Varianten von DE Algorithmen verglichen.\par
 Wenn Vektoren $x_{r1}$ und $x_{r2}$ zufällig ausgewählt werden, gibt es ein Element der \textbf{Zufälligkeit}. Wenn nur die besten Vektoren ausgewählt werden, wird \textbf{Ausbeutung} gefördert. Die Tatsache, dass nur der beste Vektor im 6. Schritt behalten wird, zeigt die Verwendung von \textbf{Rückmeldung}. Die Kombination, die im 5. Schritt stattfindet, könnte auch entweder \textbf{Erkundung} oder \textbf{Ausbeutung} fördern.
 
