@@ -23,7 +23,7 @@ Folien:
 - EA Liste (Einfach nur der Name worauf es basiert und ein Bild die damit zu tun hat)
     + This can be just one Slide with a bunch of images. Doesn't have to bee completely read or exlpained.
 - Verwendungsbereich
-    + Algunas imagenes de usos de los EA con una **breve** explicación.
+    + Algunas imagenes de usos de los EA con una **breve** (super oberflächlich) explicación.
         * Diseño de aviones
         * Las antenas de la NASA :D
         * Arte
