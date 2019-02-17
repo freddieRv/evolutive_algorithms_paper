@@ -279,20 +279,20 @@ Ein weiteres Nachteil der EA ist, dass die Einstellung der Parametern der Algori
 EA sollten immer berücksichtigt werden, wenn ein schwieriges Optimierungsproblem gelöst werden soll. Das bedeutet aber nicht, dass EA immer die beste Wahl sind; Wenn eine Gebäude oder ein komplexes Transportsystem projektiert werden soll, dann sind EA ein geeignetes Werkzeug; wenn eine komplexe elektrische Schaltung oder ein Computerprogramm entworfen werden soll, dann können EA die Aufgabe erfüllen; Aber wenn das Problem jedoch mit klassischen Methoden, analytisch oder numerisch, eine annehmbare Lösung bietet, ist es besser, diese Methoden zu verwenden.
 
 \subsection{Vergleich mit anderen Methoden}
-Optimierungsprobleme wurden seit lange umfassend untersucht, auf diesem Grund gibt es viele verschiedene Ansätze und Techniken, um sie versuchen zu lösen. Hier wird das Problem des Handlungsreisenden wieder genommen, um verschiedene Optimierungsprobleme-Lösungsmethoden zu vergleichen.\par
-Es gibt zwei Kategorien, in denen Optimierungsprobleme-Lösungsverfahren eingeordnet werden können.
+Optimierungsprobleme wurden seit lange umfassend untersucht, auf diesem Grund gibt es viele verschiedene Ansätze und Techniken, um sie versuchen zu lösen.\par
+Es gibt zwei Hauptkategorien, in denen Optimierungsprobleme-Lösungsverfahren eingeordnet werden können.
 \begin{itemize}
-\item{\textbf{Exakte Algorithmen} - Algorithmen, die genau die beste Lösung eines Problems finden. Diese Algorithmen haben ein große rechnerisch Aufwand, denn sie (implizit) alle mögliche Lösungen berücksichtigten müssen, um die Beste zu identifizieren.}
-\item{\textbf{Heuristische Algorithmen} - Diese Algorithmen, finden annehmbare Lösungen dank der Nutzung von Heuristiken. Normalerweise sind solche Algorithmen weder Zeit- noch rechnerisch-aufwendig.}
+\item{\textbf{Exakte Algorithmen} - Algorithmen, die genau die beste Lösung eines Problems finden. Diese Algorithmen haben einen große Rechenaufwand, denn sie (implizit) alle mögliche Lösungen berücksichtigten müssen, um die Beste zu identifizieren.}
+\item{\textbf{Heuristische Algorithmen} - Diese Algorithmen finden annehmbare Lösungen dank der Nutzung von Heuristiken. Normalerweise sind solche Algorithmen weder Zeit- noch rechenaufwendig.}
 \end{itemize}
 
-Die optimale Lösung einer Instanz des Problems des Handlungsreisenden mit 2392 Knoten haben Padberg und Rinaldi \cite{exact_algorithms_A} \cite{exact_algorithms_B} nach zwei Stunden und vierzig Minuten Verarbeitung mit einem exakten Algorithmus in einem mächtigen Vektor-Rechner (IBM 3090/600) gefunden. Interessanterweise, der gleiche Rechner brauchte fünf Stunden, um ein Problem mit nur 532 Knoten zu lösen. Dies zeigt, dass die Größe des Problems nicht die einzige bestimmend Faktor in Bezug auf Zeitaufwand ist.\par
+Die optimale Lösung einer Instanz des Problems des Handlungsreisenden mit 2392 Knoten haben Padberg und Rinaldi \cite{exact_algorithms_A} \cite{exact_algorithms_B} nach zwei Stunden und vierzig Minuten Verarbeitung mit einem exakten Algorithmus in einem leistungsfähigen Vektor-Rechner (IBM 3090/600) gefunden. Interessanterweise, der gleiche Rechner brauchte fünf Stunden, um ein Problem mit nur 532 Knoten zu lösen. Dies zeigt, dass die Größe des Problems nicht der einzige entscheidende Faktor in Bezug auf Zeitaufwand ist.\par
 
-Die Macht eines heuristischen Algorithmus kann durch die statistische Verteilung von produzierte Lösungen über ein Spektrum von Probleme definiert werden. Ein Maß dafür ist, zum Beispiel, Wie oft ergibt der Algorithmus aus einer zufälligen Anfangskonfiguration eine optimale Lösung.\par
+Die Leistung eines heuristischen Algorithmus kann durch die statistische Verteilung von produzierte Lösungen über ein Spektrum von Probleme definiert werden. Ein Maß dafür ist, zum Beispiel, Wie oft ergibt der Algorithmus aus einer zufälligen Anfangskonfiguration eine optimale Lösung.\par
 
 In Bezug auf algorithmische Analyse haben exakte Algorithmen normalerweise eine Komplexität von $O(n^2)$, $O(n^2\log n)$, $\Theta(n^2)$, oder $\Theta(n^2\log n)$. Für heuristische Algorithmen ist schwieriger und Umsetzung-abhängig die algorithmische Komplexität zu berechnen.\par
 
-Das Ausführen eines exakten Algorithmus über Stunden auf einem leistungsstarken Computer kann möglicherweise nicht Kosten-effektiv sein, wenn eine annehmbare Lösung schnell mit einem kleinen Rechner gefunden werden kann. Häufig werden heuristische Algorithmen bevorzugt, um TSP-Probleme zu lösen, die in der Praxis vorkommen.
+Das Ausführen eines exakten Algorithmus über Stunden auf einem leistungsfähigen Computer kann möglicherweise nicht Kosten-effektiv sein, wenn eine annehmbare Lösung schnell mit einem kleinen Rechner gefunden werden kann. Häufig werden heuristische Algorithmen bevorzugt, um TSP-Probleme zu lösen, die in der Praxis vorkommen.
 
 
 %------------------------------------------------
