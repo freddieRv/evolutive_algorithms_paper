@@ -20,6 +20,8 @@
 
 \documentclass[twoside,twocolumn]{article}
 
+\usepackage[utf8]{inputenc}
+
 \usepackage{blindtext} % Package to generate dummy text throughout this template
 
 \usepackage[sc]{mathpazo} % Use the Palatino font
@@ -102,8 +104,8 @@
 
 \section{Einleitung}
 Das Problem des Handlungsreisenden (engl. traveling salesman problem oder TSP) ist ein sehr bekanntes und studiertes Thema in den Informatik- und Optimierungsbereich. Es sieht folgendermaßen aus:\par
-Eine Reihenfolge für den Besuch mehrerer Orte muss so gewählt sein, dass keine Station, außer der ersten, mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz ist, und die erste Station gleich wie die letzte Station ist. \cite{wiki_tsp}\par
-Sei $n$ die Anzahl der Stationen, dann gibt es $(n-1)!$ mögliche Lösungen für das TSP. Daher wenn $n=4$, dann gibt es $6$ mögliche Lösungen. Es ist nicht schwierig, einen brute-force \footnote{Auch Exhaustionsmethode, ist eine Lösungsmethode für Probleme, die auf dem Ausprobieren aller möglichen (oder zumindest vieler möglicher) Fälle beruht. \cite{wiki_brute_force}} Ansatz zu verfolgen, für ein Problem, das nur 6 Lösungen hat. Aber wenn $n=50$, dann gibt es circa $6,1\e{62}$ Lösungen.\par
+Eine Reihenfolge für den Besuch mehrerer Orte muss so gewählt sein, dass keine Station, außer der ersten, mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz ist, und die erste Station gleich wie die letzte Station ist \cite{wiki_tsp}.\par
+Sei $n$ die Anzahl der Stationen, dann gibt es $(n-1)!$ mögliche Lösungen für das TSP. Daher wenn $n=4$, dann gibt es $6$ mögliche Lösungen. Es ist nicht schwierig, einen brute-force \footnote{Auch Exhaustionsmethode, ist eine Lösungsmethode für Probleme, die auf dem Ausprobieren aller möglichen (oder zumindest vieler möglicher) Fälle beruht \cite{wiki_brute_force}.} Ansatz zu verfolgen, für ein Problem, das nur 6 Lösungen hat. Aber wenn $n=50$, dann gibt es circa $6,1\e{62}$ Lösungen.\par
 Folgendes ist hilfreich, um diese Anzahl in einer Perspektive zu setzen: Das Universum ist circa 15 Milliarde Jahre alt, das ist $4,7\e{17}$ Sekunden. Wenn es eine Billion Rechner gäbe, die jede seit Anfang des Universums eine Billion Lösungen pro Sekunde berechnen würde, so wären bisher nur $4,7\e{41}$ Lösungen berechnet worden.\par
 Das TSP ist nur ein Beispiel des vielfältigen Probleme, die zu den kombinatorischen Problemen gehören, das heißt: Probleme, für die kein brute-force Ansatz möglich ist. In diesem Fall sind evolutionäre Algorithmen (EA) ein sinnvolles Werkzeug, um optimale Lösungen zu finden.\par
 Natürlich kann man nicht sicher sein, dass man die beste Lösung gefunden hat, außer würde man jede mögliche Lösung berechnen. Aber wie mit dem TSP-Beispiel gezeigt worden, kann man nicht immer alle mögliche Lösungen (in angemessener Zeit) berechnen.
@@ -180,8 +182,6 @@ Laut \cite[Kapitel 2.7]{wiley_evolutionary} sind die folgenden Eigenschaften not
 \item{\textbf{Erkundung} - Das heißt, neue Lösungen finden, neue Wege erkunden, neue Ideen erzeugen. Normalerweise ist Erkundung eng mit Zufälligkeit verbunden.}
 \item{\textbf{Ausbeutung} - Das Gegenteil von Erkundung. Das heißt, schon bekannte Lösungen und Wege (oder Kenntnisse) ausnutzen.}
 \end{itemize}
-
-In den nächsten Sektion werden verschiedene Beispiele von EA gezeigt und in jedem Beispiel wird erwähnt, welches Teil des Algorithmus welche Eigenschaft der Intelligenz  zu emulieren versucht. Es ist auch wichtig zu nennen, dass nicht jede Eigenschaft des Intelligenzes von jeden EA repliziert ist.
 
 %------------------------------------------------
 
@@ -271,11 +271,29 @@ Wenn Vektoren $x_{r1}$ und $x_{r2}$ zufällig ausgewählt werden, gibt es ein El
 %------------------------------------------------
 
 \section{Diskussion}
+\subsection{Vor- und Nachteile}
 Der größte Vorteil der evolutionären Algorithmen ist, dass es praktisch keine Grenze für ihren Verwendungsbereich gibt. Wie bereits besprochen, wenn es eine geeignete Darstellung der Lösungen eines Problems gibt, und eine geeignete Zielfunktion sich definieren lässt, kann jedes Problem mit EA optimiert werden.\par
 Im Vergleich mit anderen Lösungsmethoden sind EA vorteilhafter, denn sie annehmbare Lösungen in weniger Zeit und mit geringen Gesamtaufwand finden können.\par
 Ein Nachteil der EA ist, dass die Definition einer geeigneten Zielfunktion ein Problem gleicher Größe wie das Ursprüngliche darstellen könnte. Dies ist vermeidbar, indem das Problem geteilt wird. In der Praxis werden oft EA verwendet, um mehrere separate Teile großer komplexer Systeme zu optimieren.\par
 Ein weiteres Nachteil der EA ist, dass die Einstellung der Parametern der Algorithmen auch ein großes Problem darstellen könnte. Die Leistung der Algorithmen ist in großen Anteil davon abhängig, wie die ursprüngliche Bevölkerung initialisiert wird, und welche Werte für die Parametern der Algorithmen ausgewählt werden. Dies ist zu einem so großen Problem geworden, dass dazu Forschung betrieben wird. Um einige Beispiele zu nennen, \cite{pso_tuning_a} und \cite{pso_tuning_c} stellen Verfahren zur Parametereinstellung für PSO vor.\par
 EA sollten immer berücksichtigt werden, wenn ein schwieriges Optimierungsproblem gelöst werden soll. Das bedeutet aber nicht, dass EA immer die beste Wahl sind; Wenn eine Gebäude oder ein komplexes Transportsystem projektiert werden soll, dann sind EA ein geeignetes Werkzeug; wenn eine komplexe elektrische Schaltung oder ein Computerprogramm entworfen werden soll, dann können EA die Aufgabe erfüllen; Aber wenn das Problem jedoch mit klassischen Methoden, analytisch oder numerisch, eine annehmbare Lösung bietet, ist es besser, diese Methoden zu verwenden.
+
+\subsection{Vergleich mit anderen Methoden}
+Optimierungsprobleme wurden seit lange umfassend untersucht, auf diesem Grund gibt es viele verschiedene Ansätze und Techniken, um sie versuchen zu lösen. Hier wird das Problem des Handlungsreisenden wieder genommen, um verschiedene Optimierungsprobleme-Lösungsmethoden zu vergleichen.\par
+Es gibt zwei Kategorien, in denen Optimierungsprobleme-Lösungsverfahren eingeordnet werden können.
+\begin{itemize}
+\item{\textbf{Exakte Algorithmen} - Algorithmen, die genau die beste Lösung eines Problems finden. Diese Algorithmen haben ein große rechnerisch Aufwand, denn sie (implizit) alle mögliche Lösungen berücksichtigten müssen, um die Beste zu identifizieren.}
+\item{\textbf{Heuristische Algorithmen} - Diese Algorithmen, finden annehmbare Lösungen dank der Nutzung von Heuristiken. Normalerweise sind solche Algorithmen weder Zeit- noch rechnerisch-aufwendig.}
+\end{itemize}
+
+Die optimale Lösung einer Instanz des Problems des Handlungsreisenden mit 2392 Knoten haben Padberg und Rinaldi \cite{exact_algorithms_A} \cite{exact_algorithms_B} nach zwei Stunden und vierzig Minuten Verarbeitung mit einem exakten Algorithmus in einem mächtigen Vektor-Rechner (IBM 3090/600) gefunden. Interessanterweise, der gleiche Rechner brauchte fünf Stunden, um ein Problem mit nur 532 Knoten zu lösen. Dies zeigt, dass die Größe des Problems nicht die einzige bestimmend Faktor in Bezug auf Zeitaufwand ist.\par
+
+Die Macht eines heuristischen Algorithmus kann durch die statistische Verteilung von produzierte Lösungen über ein Spektrum von Probleme definiert werden. Ein Maß dafür ist, zum Beispiel, Wie oft ergibt der Algorithmus aus einer zufälligen Anfangskonfiguration eine optimale Lösung.\par
+
+In Bezug auf algorithmische Analyse haben exakte Algorithmen normalerweise eine Komplexität von $O(n^2)$, $O(n^2\log n)$, $\Theta(n^2)$, oder $\Theta(n^2\log n)$. Für heuristische Algorithmen ist schwieriger und Umsetzung-abhängig die algorithmische Komplexität zu berechnen.\par
+
+Das Ausführen eines exakten Algorithmus über Stunden auf einem leistungsstarken Computer kann möglicherweise nicht Kosten-effektiv sein, wenn eine annehmbare Lösung schnell mit einem kleinen Rechner gefunden werden kann. Häufig werden heuristische Algorithmen bevorzugt, um TSP-Probleme zu lösen, die in der Praxis vorkommen.
+
 
 %------------------------------------------------
 
